@@ -49,6 +49,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - Infura
 - Ankr
 - QuickNode
+- Cloudflare
 
 ## Chains
 

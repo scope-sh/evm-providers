@@ -161,6 +161,8 @@ type QuickNodeChain =
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA;
 
+type CloudflareChain = typeof ETHEREUM;
+
 function alchemy(chain: AlchemyChain, key: string): string {
   switch (chain) {
     case ETHEREUM:
@@ -393,4 +395,11 @@ function quicknode(
   }
 }
 
-export { ankr, alchemy, infura, quicknode };
+function cloudflare(chain: CloudflareChain): string {
+  switch (chain) {
+    case ETHEREUM:
+      return 'https://cloudflare-eth.com';
+  }
+}
+
+export { ankr, alchemy, cloudflare, infura, quicknode };
