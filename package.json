@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Destiner/ethcall.git"
+    "url": "git://github.com/Destiner/evm-providers.git"
   },
   "type": "module",
   "main": "./dist/index.js",
