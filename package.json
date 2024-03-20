@@ -1,0 +1,42 @@
+{
+  "name": "evm-providers",
+  "version": "0.1.0",
+  "description": "EVM JSON-RPC Provider Registry",
+  "author": {
+    "name": "Timur Badretdinov",
+    "url": "https://github.com/Destiner"
+  },
+  "keywords": [
+    "viem",
+    "ethereum"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Destiner/ethcall.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint \"src/**/*.ts\"",
+    "lint:prettier": "prettier -c \"src/**/*.{json,js,ts}\"",
+    "build": "tsc --p tsconfig.build.json",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "eslint": "^8.57.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.2.5",
+    "typescript": "5.4.3",
+    "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "viem": "^2.8.16"
+  }
+}

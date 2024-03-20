@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Clean install
+        run: bun install
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Build
+        run: bun run build
+
+      - name: Test
+        run: bun run test
