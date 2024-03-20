@@ -41,7 +41,7 @@ const client = createPublicClient({
 
 ## Contributing
 
-Contributions that add new providers and chains are very welcome!
+Contributions that add new providers and chains are very welcome! Please try to split up large changes into modular PRs, this will speed up the review process.
 
 ## Providers
 
