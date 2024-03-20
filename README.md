@@ -59,7 +59,4 @@ const client = createPublicClient({
 ## Providers
 
 - Alchemy
-
-```
-
-```
+- Infura
