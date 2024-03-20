@@ -39,24 +39,15 @@ const client = createPublicClient({
 });
 ```
 
-## Chains
+## Contributing
 
-- Ethereum
-- Sepolia
-- Polygon
-- Polygon Mumbai
-- Polygon Amoy
-- Arbitrum
-- Arbitrum Sepolia
-- Optimism
-- Optimism Sepolia
-- Polygon ZKEVM
-- Polygon ZKEVM Testnet
-- Base
-- Base Sepolia
-- Astar
+Contributions that add new providers and chains are very welcome!
 
 ## Providers
 
 - Alchemy
 - Infura
+
+## Chains
+
+See [src/index.ts](src/index.ts) for the list of supported chains.
