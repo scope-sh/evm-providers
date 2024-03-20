@@ -163,6 +163,14 @@ type QuickNodeChain =
 
 type CloudflareChain = typeof ETHEREUM;
 
+type LlamaNodesChain =
+  | typeof ARBITRUM
+  | typeof BASE
+  | typeof BSC
+  | typeof ETHEREUM
+  | typeof OPTIMISM
+  | typeof POLYGON;
+
 function alchemy(chain: AlchemyChain, key: string): string {
   switch (chain) {
     case ETHEREUM:
@@ -402,4 +410,21 @@ function cloudflare(chain: CloudflareChain): string {
   }
 }
 
-export { ankr, alchemy, cloudflare, infura, quicknode };
+function llamaNodes(chain: LlamaNodesChain, projectId: string): string {
+  switch (chain) {
+    case ARBITRUM:
+      return `https://arbitrum.llamarpc.com/${projectId}`;
+    case BASE:
+      return `https://base.llamarpc.com/${projectId}`;
+    case BSC:
+      return `https://binance.llamarpc.com/${projectId}`;
+    case ETHEREUM:
+      return `https://eth.llamarpc.com/${projectId}`;
+    case OPTIMISM:
+      return `https://optimism.llamarpc.com/${projectId}`;
+    case POLYGON:
+      return `https://polygon.llamarpc.com/${projectId}`;
+  }
+}
+
+export { ankr, alchemy, cloudflare, infura, llamaNodes, quicknode };
