@@ -8,7 +8,9 @@
   },
   "keywords": [
     "viem",
-    "ethereum"
+    "ethereum",
+    "evm",
+    "json-rpc"
   ],
   "license": "MIT",
   "repository": {
