@@ -48,6 +48,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - Alchemy
 - Infura
 - Ankr
+- QuickNode
 
 ## Chains
 
