@@ -4,6 +4,7 @@ import blast from './blast.js';
 import chainstack from './chainstack.js';
 import cloudflare from './cloudflare.js';
 import drpc from './drpc.js';
+import gatewayFm from './gatewayFm.js';
 import infura from './infura.js';
 import llamaNodes from './llamaNodes.js';
 import oneRpc from './oneRpc.js';
@@ -19,6 +20,7 @@ export {
   chainstack,
   cloudflare,
   drpc,
+  gatewayFm,
   infura,
   llamaNodes,
   oneRpc,

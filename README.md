@@ -60,6 +60,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - PublicNode
 - Stackup
 - dRPC
+- gateway.fm
 
 ## Chains
 
