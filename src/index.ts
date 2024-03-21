@@ -9,6 +9,7 @@ import {
   oneRpc,
   publicNode,
   quicknode,
+  stackup,
   tenderly,
 } from './providers/index.js';
 
@@ -23,5 +24,6 @@ export {
   oneRpc,
   publicNode,
   quicknode,
+  stackup,
   tenderly,
 };

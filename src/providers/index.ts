@@ -8,6 +8,7 @@ import llamaNodes from './llamaNodes.js';
 import oneRpc from './oneRpc.js';
 import publicNode from './publicNode.js';
 import quicknode from './quicknode.js';
+import stackup from './stackup.js';
 import tenderly from './tenderly.js';
 
 export {
@@ -21,5 +22,6 @@ export {
   oneRpc,
   publicNode,
   quicknode,
+  stackup,
   tenderly,
 };
