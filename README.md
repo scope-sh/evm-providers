@@ -75,4 +75,4 @@ We also support non-standard providers:
 
 ## Chains
 
-See [src/index.ts](src/index.ts) for the list of supported chains.
+See [src/utils/chains.ts](src/utils/chains.ts) for the list of supported chains.
