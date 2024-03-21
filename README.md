@@ -55,6 +55,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - Tenderly
 - 1RPC
 - Chainstack
+- PublicNode
 
 ## Chains
 

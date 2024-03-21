@@ -28,8 +28,6 @@ const ZKSYNC_ERA_SEPOLIA = 300;
 const ZKSYNC_ERA_GOERLI = 280;
 const CELO = 42220;
 const CELO_ALFAJORES = 44787;
-// const ZORA = 7777777;
-// const ZORA_SEPOLIA = 999999999;
 const LINEA = 59144;
 const LINEA_GOERLI = 59140;
 const BLAST = 81457;
@@ -47,6 +45,7 @@ const MOONBASE_ALPHA = 1287;
 const MOONBEAM = 1284;
 const MOONRIVER = 1285;
 const FLARE = 14;
+const KAVA = 2222;
 const TAIKO_KATLA = 167008;
 const PALM = 11297108109;
 const PALM_TESTNET = 11297108099;
@@ -63,6 +62,7 @@ const AURORA = 1313161554;
 const HARMONY = 1666600000;
 const CRONOS = 25;
 const OP_BNB = 204;
+const OP_BNB_TESTNET = 5611;
 const MANTA = 169;
 const CORE = 1116;
 const TELOS = 40;
@@ -298,6 +298,34 @@ type ChainstackChain =
   | typeof SEPOLIA
   | typeof POLYGON
   | typeof POLYGON_MUMBAI;
+
+type PublicNodeChain =
+  | typeof ETHEREUM
+  | typeof SEPOLIA
+  | typeof HOLESKY
+  | typeof BSC
+  | typeof BSC_TESTNET
+  | typeof POLYGON
+  | typeof POLYGON_MUMBAI
+  | typeof BASE
+  | typeof BASE_SEPOLIA
+  | typeof AVALANCHE_C
+  | typeof AVALANCHE_FUJI
+  | typeof ARBITRUM
+  | typeof ARBITRUM_NOVA
+  | typeof ARBITRUM_SEPOLIA
+  | typeof OPTIMISM
+  | typeof OPTIMISM_SEPOLIA
+  | typeof CRONOS
+  | typeof KAVA
+  | typeof FANTOM
+  | typeof FANTOM_TESTNET
+  | typeof OP_BNB
+  | typeof OP_BNB_TESTNET
+  | typeof GNOSIS
+  | typeof GNOSIS_CHIADO
+  | typeof MANTLE
+  | typeof MOONBEAM;
 
 function alchemy(chain: AlchemyChain, key: string): string {
   switch (chain) {
@@ -775,6 +803,63 @@ function chainstack(chain: ChainstackChain, key: string): string {
   }
 }
 
+function publicNode(chain: PublicNodeChain): string {
+  switch (chain) {
+    case ETHEREUM:
+      return 'https://ethereum-rpc.publicnode.com';
+    case SEPOLIA:
+      return 'https://ethereum-sepolia-rpc.publicnode.com';
+    case HOLESKY:
+      return 'https://ethereum-holesky-rpc.publicnode.com';
+    case BSC:
+      return 'https://bsc-rpc.publicnode.com';
+    case BSC_TESTNET:
+      return 'https://bsc-testnet-rpc.publicnode.com';
+    case POLYGON:
+      return 'https://polygon-bor-rpc.publicnode.com';
+    case POLYGON_MUMBAI:
+      return 'https://polygon-mumbai-bor-rpc.publicnode.com';
+    case BASE:
+      return 'https://base-rpc.publicnode.com';
+    case BASE_SEPOLIA:
+      return 'https://base-sepolia-rpc.publicnode.com';
+    case AVALANCHE_C:
+      return 'https://avalanche-c-chain-rpc.publicnode.com';
+    case AVALANCHE_FUJI:
+      return 'https://avalanche-fuji-c-chain-rpc.publicnode.com';
+    case ARBITRUM:
+      return 'https://arbitrum-one-rpc.publicnode.com';
+    case ARBITRUM_NOVA:
+      return 'https://arbitrum-nova-rpc.publicnode.com';
+    case ARBITRUM_SEPOLIA:
+      return 'https://arbitrum-sepolia-rpc.publicnode.com';
+    case OPTIMISM:
+      return 'https://optimism-rpc.publicnode.com';
+    case OPTIMISM_SEPOLIA:
+      return 'https://optimism-sepolia-rpc.publicnode.com';
+    case CRONOS:
+      return 'https://cronos-evm-rpc.publicnode.com';
+    case KAVA:
+      return 'https://kava-evm-rpc.publicnode.com';
+    case FANTOM:
+      return 'https://fantom-rpc.publicnode.com';
+    case FANTOM_TESTNET:
+      return 'https://fantom-testnet-rpc.publicnode.com';
+    case OP_BNB:
+      return 'https://opbnb-rpc.publicnode.com';
+    case OP_BNB_TESTNET:
+      return 'https://opbnb-testnet-rpc.publicnode.com';
+    case GNOSIS:
+      return 'https://gnosis-rpc.publicnode.com';
+    case GNOSIS_CHIADO:
+      return 'https://gnosis-chiado-rpc.publicnode.com';
+    case MANTLE:
+      return 'https://mantle-rpc.publicnode.com';
+    case MOONBEAM:
+      return 'https://moonbeam-rpc.publicnode.com';
+  }
+}
+
 export {
   alchemy,
   ankr,
@@ -784,6 +869,7 @@ export {
   infura,
   llamaNodes,
   oneRpc,
+  publicNode,
   quicknode,
   tenderly,
 };
