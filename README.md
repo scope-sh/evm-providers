@@ -45,6 +45,10 @@ const client = createPublicClient({
 
 Contributions that add new providers and chains are very welcome! Please try to split up large changes into modular PRs, this will speed up the review process.
 
+We would also like to enable providing API keys to all providers that support it. Don't hesitate to open a PR that adds support for your favorite provider.
+
+Finally, we would like to extend the registry by supporting more features (e.g. WSS endpoints, RPC flavors, etc). Feel free to provide feedback on the ideal DX around that.
+
 ## Providers
 
 - Alchemy
