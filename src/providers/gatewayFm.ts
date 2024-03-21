@@ -14,7 +14,7 @@ import {
   ARBITRUM_GOERLI,
   GNOSIS,
   GNOSIS_CHIADO,
-} from '@/utils/chains.js';
+} from '../utils/chains.js';
 
 type Chain =
   | typeof ETHEREUM
