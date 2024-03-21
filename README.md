@@ -52,6 +52,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - Cloudflare
 - LlamaNodes
 - Blast
+- Tenderly
 
 ## Chains
 
