@@ -37,8 +37,5 @@
     "prettier": "^3.2.5",
     "typescript": "5.4.3",
     "vitest": "^1.4.0"
-  },
-  "dependencies": {
-    "viem": "^2.8.16"
   }
 }
