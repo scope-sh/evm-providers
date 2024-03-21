@@ -1,5 +1,9 @@
 import alchemy from './alchemy.js';
 import ankr from './ankr.js';
+import {
+  bundler as biconomyBundler,
+  paymaster as biconomyPaymaster,
+} from './biconomy.js';
 import blast from './blast.js';
 import chainstack from './chainstack.js';
 import cloudflare from './cloudflare.js';
@@ -17,6 +21,8 @@ import tenderly from './tenderly.js';
 export {
   alchemy,
   ankr,
+  biconomyBundler,
+  biconomyPaymaster,
   blast,
   chainstack,
   cloudflare,

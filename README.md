@@ -5,7 +5,7 @@ EVM JSON-RPC Provider Registry
 - Tree-shakeable
 - Zero dependencies
 - Fully typed
-- 20+ providers
+- 15+ providers
 - Most EVM chains
 - Non-standard providers (e.g. bundlers and paymasters)
 
@@ -66,6 +66,8 @@ We also support non-standard providers:
 
 - Stackup Paymaster
 - Pimlico Bundler/Paymaster
+- Biconomy Bundler
+- Biconomy Paymaster
 
 ## Chains
 
