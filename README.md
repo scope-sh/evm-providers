@@ -65,6 +65,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 We also support non-standard providers:
 
 - Stackup Paymaster
+- Pimlico Bundler/Paymaster
 
 ## Chains
 

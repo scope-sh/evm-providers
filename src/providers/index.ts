@@ -8,6 +8,7 @@ import gatewayFm from './gatewayFm.js';
 import infura from './infura.js';
 import llamaNodes from './llamaNodes.js';
 import oneRpc from './oneRpc.js';
+import pimlico from './pimlico.js';
 import publicNode from './publicNode.js';
 import quicknode from './quicknode.js';
 import stackup, { paymaster as stackupPaymaster } from './stackup.js';
@@ -24,6 +25,7 @@ export {
   infura,
   llamaNodes,
   oneRpc,
+  pimlico,
   publicNode,
   quicknode,
   stackup,
