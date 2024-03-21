@@ -2,6 +2,8 @@
 
 EVM JSON-RPC Provider Registry
 
+- Tree-shakeable
+- Zero dependencies
 - Fully typed
 - 20+ providers
 - Most EVM chains
