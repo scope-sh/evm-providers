@@ -51,6 +51,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - QuickNode
 - Cloudflare
 - LlamaNodes
+- Blast
 
 ## Chains
 
