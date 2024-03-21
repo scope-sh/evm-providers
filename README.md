@@ -62,6 +62,10 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - dRPC
 - gateway.fm
 
+We also support non-standard providers:
+
+- Stackup Paymaster
+
 ## Chains
 
 See [src/index.ts](src/index.ts) for the list of supported chains.

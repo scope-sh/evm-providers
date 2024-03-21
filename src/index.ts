@@ -12,6 +12,7 @@ import {
   publicNode,
   quicknode,
   stackup,
+  stackupPaymaster,
   tenderly,
 } from './providers/index.js';
 
@@ -29,5 +30,6 @@ export {
   publicNode,
   quicknode,
   stackup,
+  stackupPaymaster,
   tenderly,
 };
