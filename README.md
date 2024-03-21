@@ -28,7 +28,7 @@ const url = alchemy(1, '<your-alchemy-key>');
 // https://eth-mainnet.g.alchemy.com/v2/<your-alchemy-key>
 ```
 
-With [viem](https://github.com/wagmi-dev/viem):
+With [viem](https://viem.sh):
 
 ```ts
 import { createPublicClient, http } from 'viem';
