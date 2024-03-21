@@ -54,6 +54,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - Blast
 - Tenderly
 - 1RPC
+- Chainstack
 
 ## Chains
 

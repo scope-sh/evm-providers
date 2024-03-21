@@ -292,6 +292,13 @@ type OneRpcChain =
   | typeof KROMA
   | typeof HORIZEN_EON;
 
+type ChainstackChain =
+  | typeof ETHEREUM
+  | typeof HOLESKY
+  | typeof SEPOLIA
+  | typeof POLYGON
+  | typeof POLYGON_MUMBAI;
+
 function alchemy(chain: AlchemyChain, key: string): string {
   switch (chain) {
     case ETHEREUM:
@@ -753,10 +760,26 @@ function oneRpc(chain: OneRpcChain): string {
   }
 }
 
+function chainstack(chain: ChainstackChain, key: string): string {
+  switch (chain) {
+    case ETHEREUM:
+      return `https://ethereum-mainnet.core.chainstack.com/${key}`;
+    case HOLESKY:
+      return `https://ethereum-holesky.core.chainstack.com/${key}`;
+    case SEPOLIA:
+      return `https://ethereum-sepolia.core.chainstack.com/${key}`;
+    case POLYGON:
+      return `https://polygon-mainnet.core.chainstack.com/${key}`;
+    case POLYGON_MUMBAI:
+      return `https://polygon-mumbai.core.chainstack.com/${key}`;
+  }
+}
+
 export {
   alchemy,
   ankr,
   blast,
+  chainstack,
   cloudflare,
   infura,
   llamaNodes,
