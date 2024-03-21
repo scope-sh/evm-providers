@@ -1,7 +1,7 @@
 {
   "name": "evm-providers",
   "version": "0.4.1",
-  "description": "EVM JSON-RPC Provider Registry",
+  "description": "JSON-RPC Provider Registry for EVM chains",
   "author": {
     "name": "Timur Badretdinov",
     "url": "https://github.com/Destiner"

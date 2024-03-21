@@ -1,6 +1,6 @@
 # evm-providers
 
-EVM JSON-RPC Provider Registry
+JSON-RPC Provider Registry for EVM chains
 
 - Tree-shakeable
 - Zero dependencies
