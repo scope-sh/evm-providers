@@ -3,6 +3,7 @@ import ankr from './ankr.js';
 import blast from './blast.js';
 import chainstack from './chainstack.js';
 import cloudflare from './cloudflare.js';
+import drpc from './drpc.js';
 import infura from './infura.js';
 import llamaNodes from './llamaNodes.js';
 import oneRpc from './oneRpc.js';
@@ -17,6 +18,7 @@ export {
   blast,
   chainstack,
   cloudflare,
+  drpc,
   infura,
   llamaNodes,
   oneRpc,

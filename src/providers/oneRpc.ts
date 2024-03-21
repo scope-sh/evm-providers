@@ -24,7 +24,7 @@ import {
   MANTLE,
   CRONOS,
   OP_BNB,
-  MANTA,
+  MANTA_PACIFIC,
   CORE,
   TELOS,
   BOBA_ETHEREUM,
@@ -59,7 +59,7 @@ type OneRpcChain =
   | typeof MANTLE
   | typeof CRONOS
   | typeof OP_BNB
-  | typeof MANTA
+  | typeof MANTA_PACIFIC
   | typeof CORE
   | typeof TELOS
   | typeof BOBA_ETHEREUM
@@ -119,7 +119,7 @@ function endpoint(chain: OneRpcChain): string {
       return 'https://1rpc.io/cro';
     case OP_BNB:
       return 'https://1rpc.io/opbnb';
-    case MANTA:
+    case MANTA_PACIFIC:
       return 'https://1rpc.io/manta';
     case CORE:
       return 'https://1rpc.io/core';

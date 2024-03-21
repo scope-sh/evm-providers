@@ -59,6 +59,7 @@ Contributions that add new providers and chains are very welcome! Please try to 
 - Chainstack
 - PublicNode
 - Stackup
+- dRPC
 
 ## Chains
 
