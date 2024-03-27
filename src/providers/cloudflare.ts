@@ -1,8 +1,8 @@
 import { ETHEREUM } from '../utils/chains.js';
 
-type CloudflareChain = typeof ETHEREUM;
+type Chain = typeof ETHEREUM;
 
-function endpoint(chain: CloudflareChain): string {
+function endpoint(chain: Chain): string {
   switch (chain) {
     case ETHEREUM:
       return 'https://cloudflare-eth.com';
@@ -10,3 +10,4 @@ function endpoint(chain: CloudflareChain): string {
 }
 
 export default endpoint;
+export type { Chain };

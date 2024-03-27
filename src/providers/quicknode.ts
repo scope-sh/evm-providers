@@ -35,7 +35,7 @@ import {
   ZKSYNC_ERA_SEPOLIA,
 } from '../utils/chains.js';
 
-type QuickNodeChain =
+type Chain =
   | typeof ARBITRUM
   | typeof ARBITRUM_GOERLI
   | typeof ARBITRUM_SEPOLIA
@@ -71,11 +71,7 @@ type QuickNodeChain =
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA;
 
-function endpoint(
-  chain: QuickNodeChain,
-  appName: string,
-  appKey: string,
-): string {
+function endpoint(chain: Chain, appName: string, appKey: string): string {
   switch (chain) {
     case ARBITRUM:
       return `https://${appName}.arbitrum-mainnet.quiknode.pro/${appKey}`;
@@ -149,3 +145,4 @@ function endpoint(
 }
 
 export default endpoint;
+export type { Chain };

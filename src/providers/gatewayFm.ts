@@ -80,3 +80,4 @@ function endpoint(chain: Chain, region: Region, isArchival: boolean): string {
 }
 
 export default endpoint;
+export type { Chain };

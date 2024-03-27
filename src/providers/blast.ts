@@ -46,7 +46,7 @@ import {
   ZKSYNC_ERA_SEPOLIA,
 } from '../utils/chains.js';
 
-type BlastChain =
+type Chain =
   | typeof ARBITRUM
   | typeof ARBITRUM_GOERLI
   | typeof ARBITRUM_SEPOLIA
@@ -93,7 +93,7 @@ type BlastChain =
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA;
 
-function endpoint(chain: BlastChain, projectId: string): string {
+function endpoint(chain: Chain, projectId: string): string {
   switch (chain) {
     case ARBITRUM:
       return `https://arbitrum-one.blastapi.io/${projectId}`;
@@ -189,3 +189,4 @@ function endpoint(chain: BlastChain, projectId: string): string {
 }
 
 export default endpoint;
+export type { Chain };

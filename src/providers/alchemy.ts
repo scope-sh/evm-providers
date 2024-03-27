@@ -15,7 +15,7 @@ import {
   ASTAR,
 } from '../utils/chains.js';
 
-type AlchemyChain =
+type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof POLYGON
@@ -31,7 +31,7 @@ type AlchemyChain =
   | typeof BASE_SEPOLIA
   | typeof ASTAR;
 
-function endpoint(chain: AlchemyChain, key: string): string {
+function endpoint(chain: Chain, key: string): string {
   switch (chain) {
     case ETHEREUM:
       return `https://eth-mainnet.g.alchemy.com/v2/${key}`;
@@ -65,3 +65,4 @@ function endpoint(chain: AlchemyChain, key: string): string {
 }
 
 export default endpoint;
+export type { Chain };

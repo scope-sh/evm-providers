@@ -37,7 +37,7 @@ import {
   TAIKO_KATLA,
 } from '../utils/chains.js';
 
-type AnkrChain =
+type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof HOLESKY
@@ -75,7 +75,7 @@ type AnkrChain =
   | typeof FLARE
   | typeof TAIKO_KATLA;
 
-function endpoint(chain: AnkrChain): string {
+function endpoint(chain: Chain): string {
   switch (chain) {
     case ETHEREUM:
       return 'https://rpc.ankr.com/eth';
@@ -153,3 +153,4 @@ function endpoint(chain: AnkrChain): string {
 }
 
 export default endpoint;
+export type { Chain };

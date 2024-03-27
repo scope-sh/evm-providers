@@ -33,7 +33,7 @@ import {
   HORIZEN_EON,
 } from '../utils/chains.js';
 
-type OneRpcChain =
+type Chain =
   | typeof ETHEREUM
   | typeof HOLESKY
   | typeof SEPOLIA
@@ -67,7 +67,7 @@ type OneRpcChain =
   | typeof KROMA
   | typeof HORIZEN_EON;
 
-function endpoint(chain: OneRpcChain): string {
+function endpoint(chain: Chain): string {
   switch (chain) {
     case ETHEREUM:
       return 'https://1rpc.io/eth';
@@ -137,3 +137,4 @@ function endpoint(chain: OneRpcChain): string {
 }
 
 export default endpoint;
+export type { Chain };

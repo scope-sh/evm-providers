@@ -273,3 +273,4 @@ function endpoint(chain: Chain): string {
 }
 
 export default endpoint;
+export type { Chain };

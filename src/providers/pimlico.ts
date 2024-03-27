@@ -102,3 +102,4 @@ function endpoint(chain: Chain, apiKey: string): string {
 }
 
 export default endpoint;
+export type { Chain };

@@ -90,3 +90,4 @@ function bundler(chain: Chain, apiKey: string): string {
 }
 
 export { bundler, paymaster };
+export type { Chain };

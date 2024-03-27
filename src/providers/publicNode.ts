@@ -27,7 +27,7 @@ import {
   MOONBEAM,
 } from '../utils/chains.js';
 
-type PublicNodeChain =
+type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof HOLESKY
@@ -55,7 +55,7 @@ type PublicNodeChain =
   | typeof MANTLE
   | typeof MOONBEAM;
 
-function endpoint(chain: PublicNodeChain): string {
+function endpoint(chain: Chain): string {
   switch (chain) {
     case ETHEREUM:
       return 'https://ethereum-rpc.publicnode.com';
@@ -113,3 +113,4 @@ function endpoint(chain: PublicNodeChain): string {
 }
 
 export default endpoint;
+export type { Chain };

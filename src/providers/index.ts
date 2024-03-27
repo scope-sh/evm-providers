@@ -1,22 +1,23 @@
-import alchemy from './alchemy.js';
-import ankr from './ankr.js';
+import alchemy, { type Chain as AlchemyChain } from './alchemy.js';
+import ankr, { type Chain as AnkrChain } from './ankr.js';
 import {
   bundler as biconomyBundler,
   paymaster as biconomyPaymaster,
+  type Chain as BiconomyChain,
 } from './biconomy.js';
-import blast from './blast.js';
-import chainstack from './chainstack.js';
-import cloudflare from './cloudflare.js';
-import drpc from './drpc.js';
-import gatewayFm from './gatewayFm.js';
-import infura from './infura.js';
-import llamaNodes from './llamaNodes.js';
-import oneRpc from './oneRpc.js';
-import pimlico from './pimlico.js';
-import publicNode from './publicNode.js';
-import quicknode from './quicknode.js';
+import blast, { type Chain as BlastChain } from './blast.js';
+import chainstack, { type Chain as ChainstackChain } from './chainstack.js';
+import cloudflare, { type Chain as CloudflareChain } from './cloudflare.js';
+import drpc, { type Chain as DrpcChain } from './drpc.js';
+import gatewayFm, { type Chain as GatewayFmChain } from './gatewayFm.js';
+import infura, { type Chain as InfuraChain } from './infura.js';
+import llamaNodes, { type Chain as LlamaNodesChain } from './llamaNodes.js';
+import oneRpc, { type Chain as OneRpcChain } from './oneRpc.js';
+import pimlico, { type Chain as PimlicoChain } from './pimlico.js';
+import publicNode, { type Chain as PublicNodeChain } from './publicNode.js';
+import quicknode, { type Chain as QuickNodeChain } from './quicknode.js';
 import stackup, { paymaster as stackupPaymaster } from './stackup.js';
-import tenderly from './tenderly.js';
+import tenderly, { type Chain as TenderlyChain } from './tenderly.js';
 
 export {
   alchemy,
@@ -37,4 +38,21 @@ export {
   stackup,
   stackupPaymaster,
   tenderly,
+};
+export type {
+  AlchemyChain,
+  AnkrChain,
+  BiconomyChain,
+  BlastChain,
+  ChainstackChain,
+  CloudflareChain,
+  DrpcChain,
+  GatewayFmChain,
+  InfuraChain,
+  LlamaNodesChain,
+  OneRpcChain,
+  PimlicoChain,
+  PublicNodeChain,
+  QuickNodeChain,
+  TenderlyChain,
 };

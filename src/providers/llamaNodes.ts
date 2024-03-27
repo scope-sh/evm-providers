@@ -7,7 +7,7 @@ import {
   POLYGON,
 } from '../utils/chains.js';
 
-type LlamaNodesChain =
+type Chain =
   | typeof ARBITRUM
   | typeof BASE
   | typeof BSC
@@ -15,7 +15,7 @@ type LlamaNodesChain =
   | typeof OPTIMISM
   | typeof POLYGON;
 
-function endpoint(chain: LlamaNodesChain, projectId: string): string {
+function endpoint(chain: Chain, projectId: string): string {
   switch (chain) {
     case ARBITRUM:
       return `https://arbitrum.llamarpc.com/${projectId}`;
@@ -33,3 +33,4 @@ function endpoint(chain: LlamaNodesChain, projectId: string): string {
 }
 
 export default endpoint;
+export type { Chain };

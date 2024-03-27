@@ -18,6 +18,23 @@ import {
   stackupPaymaster,
   tenderly,
 } from './providers/index.js';
+import type {
+  AlchemyChain,
+  AnkrChain,
+  BiconomyChain,
+  BlastChain,
+  ChainstackChain,
+  CloudflareChain,
+  DrpcChain,
+  GatewayFmChain,
+  InfuraChain,
+  LlamaNodesChain,
+  OneRpcChain,
+  PimlicoChain,
+  PublicNodeChain,
+  QuickNodeChain,
+  TenderlyChain,
+} from './providers/index.js';
 
 export {
   alchemy,
@@ -38,4 +55,21 @@ export {
   stackup,
   stackupPaymaster,
   tenderly,
+};
+export type {
+  AlchemyChain,
+  AnkrChain,
+  BiconomyChain,
+  BlastChain,
+  ChainstackChain,
+  CloudflareChain,
+  DrpcChain,
+  GatewayFmChain,
+  InfuraChain,
+  LlamaNodesChain,
+  OneRpcChain,
+  PimlicoChain,
+  PublicNodeChain,
+  QuickNodeChain,
+  TenderlyChain,
 };

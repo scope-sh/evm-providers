@@ -19,7 +19,7 @@ import {
   BOBA_BNB_TESTNET,
 } from '../utils/chains.js';
 
-type TenderlyChain =
+type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof GOERLI
@@ -39,7 +39,7 @@ type TenderlyChain =
   | typeof BOBA_BNB
   | typeof BOBA_BNB_TESTNET;
 
-function endpoint(chain: TenderlyChain, accessKey: string): string {
+function endpoint(chain: Chain, accessKey: string): string {
   switch (chain) {
     case ETHEREUM:
       return `https://mainnet.gateway.tenderly.co/${accessKey}`;
@@ -81,3 +81,4 @@ function endpoint(chain: TenderlyChain, accessKey: string): string {
 }
 
 export default endpoint;
+export type { Chain };

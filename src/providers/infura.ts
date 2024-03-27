@@ -21,7 +21,7 @@ import {
   CELO_ALFAJORES,
 } from '../utils/chains.js';
 
-type InfuraChain =
+type Chain =
   | typeof ETHEREUM
   | typeof GOERLI
   | typeof SEPOLIA
@@ -43,7 +43,7 @@ type InfuraChain =
   | typeof CELO
   | typeof CELO_ALFAJORES;
 
-function endpoint(chain: InfuraChain, key: string): string {
+function endpoint(chain: Chain, key: string): string {
   switch (chain) {
     case ETHEREUM:
       return `https://mainnet.infura.io/v3/${key}`;
@@ -89,3 +89,4 @@ function endpoint(chain: InfuraChain, key: string): string {
 }
 
 export default endpoint;
+export type { Chain };

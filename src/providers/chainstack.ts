@@ -6,14 +6,14 @@ import {
   POLYGON_MUMBAI,
 } from '../utils/chains.js';
 
-type ChainstackChain =
+type Chain =
   | typeof ETHEREUM
   | typeof HOLESKY
   | typeof SEPOLIA
   | typeof POLYGON
   | typeof POLYGON_MUMBAI;
 
-function endpoint(chain: ChainstackChain, key: string): string {
+function endpoint(chain: Chain, key: string): string {
   switch (chain) {
     case ETHEREUM:
       return `https://ethereum-mainnet.core.chainstack.com/${key}`;
@@ -29,3 +29,4 @@ function endpoint(chain: ChainstackChain, key: string): string {
 }
 
 export default endpoint;
+export type { Chain };
