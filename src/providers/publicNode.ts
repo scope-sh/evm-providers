@@ -25,6 +25,7 @@ import {
   GNOSIS_CHIADO,
   MANTLE,
   MOONBEAM,
+  MOONRIVER,
 } from '../utils/chains.js';
 
 type Chain =
@@ -53,7 +54,8 @@ type Chain =
   | typeof GNOSIS
   | typeof GNOSIS_CHIADO
   | typeof MANTLE
-  | typeof MOONBEAM;
+  | typeof MOONBEAM
+  | typeof MOONRIVER;
 
 function endpoint(chain: Chain): string {
   switch (chain) {
@@ -109,6 +111,8 @@ function endpoint(chain: Chain): string {
       return 'https://mantle-rpc.publicnode.com';
     case MOONBEAM:
       return 'https://moonbeam-rpc.publicnode.com';
+    case MOONRIVER:
+      return 'https://moonriver-rpc.publicnode.com';
   }
 }
 
