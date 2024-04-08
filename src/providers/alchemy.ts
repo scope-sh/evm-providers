@@ -10,6 +10,7 @@ import {
   OPTIMISM_SEPOLIA,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
+  POLYGON_ZKEVM_CARDONA,
   BASE,
   BASE_SEPOLIA,
   ASTAR,
@@ -27,6 +28,7 @@ type Chain =
   | typeof OPTIMISM_SEPOLIA
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
+  | typeof POLYGON_ZKEVM_CARDONA
   | typeof BASE
   | typeof BASE_SEPOLIA
   | typeof ASTAR;
@@ -55,6 +57,8 @@ function endpoint(chain: Chain, key: string): string {
       return `https://polygonzkevm-mainnet.g.alchemy.com/v2/${key}`;
     case POLYGON_ZKEVM_TESTNET:
       return `https://polygonzkevm-testnet.g.alchemy.com/v2/${key}`;
+    case POLYGON_ZKEVM_CARDONA:
+      return `https://polygonzkevm-cardona.g.alchemy.com/v2/${key}`;
     case BASE:
       return `https://base-mainnet.g.alchemy.com/v2/${key}`;
     case BASE_SEPOLIA:

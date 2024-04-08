@@ -7,6 +7,7 @@ import {
   POLYGON_MUMBAI,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
+  POLYGON_ZKEVM_CARDONA,
   ARBITRUM,
   ARBITRUM_SEPOLIA,
   ARBITRUM_NOVA,
@@ -46,6 +47,7 @@ type Chain =
   | typeof POLYGON_MUMBAI
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
+  | typeof POLYGON_ZKEVM_CARDONA
   | typeof ARBITRUM
   | typeof ARBITRUM_SEPOLIA
   | typeof ARBITRUM_NOVA
@@ -93,6 +95,8 @@ function endpoint(chain: Chain): string {
       return 'https://rpc.ankr.com/polygon_zkevm';
     case POLYGON_ZKEVM_TESTNET:
       return 'https://rpc.ankr.com/polygon_zkevm_testnet';
+    case POLYGON_ZKEVM_CARDONA:
+      return 'https://rpc.ankr.com/polygon_zkevm_cardona';
     case ARBITRUM:
       return 'https://rpc.ankr.com/arbitrum';
     case ARBITRUM_SEPOLIA:

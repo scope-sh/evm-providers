@@ -37,7 +37,7 @@ import {
   AURORA,
   AURORA_TESTNET,
   POLYGON_ZKEVM,
-  POLYGON_ZKEVM_TESTNET,
+  POLYGON_ZKEVM_CARDONA,
   KLAYTN,
   KLAYTN_BAOBAB,
   BLAST,
@@ -106,7 +106,7 @@ type Chain =
   | typeof AURORA
   | typeof AURORA_TESTNET
   | typeof POLYGON_ZKEVM
-  | typeof POLYGON_ZKEVM_TESTNET
+  | typeof POLYGON_ZKEVM_CARDONA
   | typeof KLAYTN
   | typeof KLAYTN_BAOBAB
   | typeof BLAST
@@ -213,8 +213,8 @@ function endpoint(chain: Chain): string {
       return 'https://aurora-testnet.drpc.org';
     case POLYGON_ZKEVM:
       return 'https://polygon-zkevm.drpc.org';
-    case POLYGON_ZKEVM_TESTNET:
-      return 'https://polygon-zkevm-testnet.drpc.org';
+    case POLYGON_ZKEVM_CARDONA:
+      return 'https://polygon-zkevm-cardona.drpc.org';
     case KLAYTN:
       return 'https://klaytn.drpc.org';
     case KLAYTN_BAOBAB:
