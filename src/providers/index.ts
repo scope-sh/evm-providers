@@ -8,6 +8,7 @@ import {
 import blast, { type Chain as BlastChain } from './blast.js';
 import chainstack, { type Chain as ChainstackChain } from './chainstack.js';
 import cloudflare, { type Chain as CloudflareChain } from './cloudflare.js';
+import conduit, { type Chain as ConduitChain } from './conduit.js';
 import drpc, { type Chain as DrpcChain } from './drpc.js';
 import gatewayFm, { type Chain as GatewayFmChain } from './gatewayFm.js';
 import infura, { type Chain as InfuraChain } from './infura.js';
@@ -27,6 +28,7 @@ export {
   blast,
   chainstack,
   cloudflare,
+  conduit,
   drpc,
   gatewayFm,
   infura,
@@ -46,6 +48,7 @@ export type {
   BlastChain,
   ChainstackChain,
   CloudflareChain,
+  ConduitChain,
   DrpcChain,
   GatewayFmChain,
   InfuraChain,
