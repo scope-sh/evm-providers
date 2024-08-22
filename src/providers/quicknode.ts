@@ -124,7 +124,7 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
     case OPTIMISM_SEPOLIA:
       return `https://${appName}.optimism-sepolia.quiknode.pro/${appKey}`;
     case POLYGON:
-      return `https://${appName}.polygon.quiknode.pro/${appKey}`;
+      return `https://${appName}.matic.quiknode.pro/${appKey}`;
     case POLYGON_AMOY:
       return `https://${appName}.matic-amoy.quiknode.pro/${appKey}`;
     case POLYGON_MUMBAI:
