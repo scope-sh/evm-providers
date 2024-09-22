@@ -31,6 +31,7 @@
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint \"src/**/*.ts\"",
     "lint:prettier": "prettier -c \"src/**/*.{json,js,ts}\"",
+    "typecheck": "tsc --noEmit",
     "build": "tsc --p tsconfig.build.json",
     "prepack": "npm run build"
   },
