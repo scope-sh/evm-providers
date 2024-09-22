@@ -18,6 +18,7 @@
     "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedSideEffectImports": true,
     /* Transpile */
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
