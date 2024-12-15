@@ -4,7 +4,6 @@ import {
   GOERLI,
   HOLESKY,
   POLYGON,
-  POLYGON_MUMBAI,
   OPTIMISM,
   OPTIMISM_GOERLI,
   OPTIMISM_SEPOLIA,
@@ -25,7 +24,6 @@ type Chain =
   | typeof GOERLI
   | typeof HOLESKY
   | typeof POLYGON
-  | typeof POLYGON_MUMBAI
   | typeof OPTIMISM
   | typeof OPTIMISM_GOERLI
   | typeof OPTIMISM_SEPOLIA
@@ -51,8 +49,6 @@ function endpoint(chain: Chain, accessKey: string): string {
       return `https://holesky.gateway.tenderly.co/${accessKey}`;
     case POLYGON:
       return `https://polygon.gateway.tenderly.co/${accessKey}`;
-    case POLYGON_MUMBAI:
-      return `https://polygon-mumbai.gateway.tenderly.co/${accessKey}`;
     case OPTIMISM:
       return `https://optimism.gateway.tenderly.co/${accessKey}`;
     case OPTIMISM_GOERLI:

@@ -7,7 +7,6 @@ import {
   BSC_TESTNET,
   POLYGON,
   POLYGON_AMOY,
-  POLYGON_MUMBAI,
   ARBITRUM,
   ARBITRUM_SEPOLIA,
   ARBITRUM_GOERLI,
@@ -76,7 +75,6 @@ type Chain =
   | typeof BSC_TESTNET
   | typeof POLYGON
   | typeof POLYGON_AMOY
-  | typeof POLYGON_MUMBAI
   | typeof ARBITRUM
   | typeof ARBITRUM_SEPOLIA
   | typeof ARBITRUM_GOERLI
@@ -153,8 +151,6 @@ function endpoint(chain: Chain): string {
       return 'https://polygon.drpc.org';
     case POLYGON_AMOY:
       return 'https://polygon-amoy.drpc.org';
-    case POLYGON_MUMBAI:
-      return 'https://polygon-mumbai.drpc.org';
     case ARBITRUM:
       return 'https://arbitrum.drpc.org';
     case ARBITRUM_SEPOLIA:

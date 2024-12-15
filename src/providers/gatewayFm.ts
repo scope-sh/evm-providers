@@ -7,7 +7,6 @@ import {
   OPTIMISM,
   OPTIMISM_GOERLI,
   POLYGON,
-  POLYGON_MUMBAI,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
   ARBITRUM,
@@ -25,7 +24,6 @@ type Chain =
   | typeof OPTIMISM
   | typeof OPTIMISM_GOERLI
   | typeof POLYGON
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
   | typeof ARBITRUM
@@ -57,8 +55,6 @@ function endpoint(chain: Chain, region: Region, isArchival: boolean): string {
         return { name: 'optimism', subName: 'goerli' };
       case POLYGON:
         return { name: 'polygon', subName: 'mainnet' };
-      case POLYGON_MUMBAI:
-        return { name: 'polygon', subName: 'mumbai' };
       case POLYGON_ZKEVM:
         return { name: 'polygon-zkevm', subName: 'mainnet' };
       case POLYGON_ZKEVM_TESTNET:

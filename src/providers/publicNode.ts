@@ -5,7 +5,6 @@ import {
   BSC,
   BSC_TESTNET,
   POLYGON,
-  POLYGON_MUMBAI,
   POLYGON_AMOY,
   BASE,
   BASE_SEPOLIA,
@@ -36,7 +35,6 @@ type Chain =
   | typeof BSC
   | typeof BSC_TESTNET
   | typeof POLYGON
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_AMOY
   | typeof BASE
   | typeof BASE_SEPOLIA
@@ -73,8 +71,6 @@ function endpoint(chain: Chain): string {
       return 'https://bsc-testnet-rpc.publicnode.com';
     case POLYGON:
       return 'https://polygon-bor-rpc.publicnode.com';
-    case POLYGON_MUMBAI:
-      return 'https://polygon-mumbai-bor-rpc.publicnode.com';
     case POLYGON_AMOY:
       return 'https://polygon-amoy-bor-rpc.publicnode.com';
     case BASE:

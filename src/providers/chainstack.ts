@@ -1,17 +1,6 @@
-import {
-  ETHEREUM,
-  HOLESKY,
-  SEPOLIA,
-  POLYGON,
-  POLYGON_MUMBAI,
-} from '../utils/chains.js';
+import { ETHEREUM, HOLESKY, SEPOLIA, POLYGON } from '../utils/chains.js';
 
-type Chain =
-  | typeof ETHEREUM
-  | typeof HOLESKY
-  | typeof SEPOLIA
-  | typeof POLYGON
-  | typeof POLYGON_MUMBAI;
+type Chain = typeof ETHEREUM | typeof HOLESKY | typeof SEPOLIA | typeof POLYGON;
 
 function endpoint(chain: Chain, key: string): string {
   switch (chain) {
@@ -23,8 +12,6 @@ function endpoint(chain: Chain, key: string): string {
       return `https://ethereum-sepolia.core.chainstack.com/${key}`;
     case POLYGON:
       return `https://polygon-mainnet.core.chainstack.com/${key}`;
-    case POLYGON_MUMBAI:
-      return `https://polygon-mumbai.core.chainstack.com/${key}`;
   }
 }
 

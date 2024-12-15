@@ -5,7 +5,6 @@ import {
   LINEA,
   LINEA_GOERLI,
   POLYGON,
-  POLYGON_MUMBAI,
   POLYGON_AMOY,
   BLAST,
   BLAST_SEPOLIA,
@@ -28,7 +27,6 @@ type Chain =
   | typeof LINEA
   | typeof LINEA_GOERLI
   | typeof POLYGON
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_AMOY
   | typeof BLAST
   | typeof BLAST_SEPOLIA
@@ -57,8 +55,6 @@ function endpoint(chain: Chain, key: string): string {
       return `https://linea-goerli.infura.io/v3/${key}`;
     case POLYGON:
       return `https://polygon-mainnet.infura.io/v3/${key}`;
-    case POLYGON_MUMBAI:
-      return `https://polygon-mumbai.infura.io/v3/${key}`;
     case POLYGON_AMOY:
       return `https://polygon-amoy.infura.io/v3/${key}`;
     case BLAST:

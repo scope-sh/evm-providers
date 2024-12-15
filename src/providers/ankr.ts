@@ -4,7 +4,6 @@ import {
   HOLESKY,
   POLYGON,
   POLYGON_AMOY,
-  POLYGON_MUMBAI,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
   POLYGON_ZKEVM_CARDONA,
@@ -44,7 +43,6 @@ type Chain =
   | typeof HOLESKY
   | typeof POLYGON
   | typeof POLYGON_AMOY
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
   | typeof POLYGON_ZKEVM_CARDONA
@@ -89,8 +87,6 @@ function endpoint(chain: Chain): string {
       return 'https://rpc.ankr.com/polygon';
     case POLYGON_AMOY:
       return 'https://rpc.ankr.com/polygon_amoy';
-    case POLYGON_MUMBAI:
-      return 'https://rpc.ankr.com/polygon_mumbai';
     case POLYGON_ZKEVM:
       return 'https://rpc.ankr.com/polygon_zkevm';
     case POLYGON_ZKEVM_TESTNET:

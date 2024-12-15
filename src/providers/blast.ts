@@ -37,7 +37,6 @@ import {
   PALM,
   PALM_TESTNET,
   POLYGON,
-  POLYGON_MUMBAI,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
   SCROLL,
@@ -85,7 +84,6 @@ type Chain =
   | typeof PALM
   | typeof PALM_TESTNET
   | typeof POLYGON
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
   | typeof SCROLL
@@ -171,8 +169,6 @@ function endpoint(chain: Chain, projectId: string): string {
       return `https://palm-testnet.blastapi.io/${projectId}`;
     case POLYGON:
       return `https://polygon-mainnet.blastapi.io/${projectId}`;
-    case POLYGON_MUMBAI:
-      return `https://polygon-testnet.blastapi.io/${projectId}`;
     case POLYGON_ZKEVM:
       return `https://polygon-zkevm-mainnet.blastapi.io/${projectId}`;
     case POLYGON_ZKEVM_TESTNET:

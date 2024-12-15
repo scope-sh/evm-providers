@@ -26,7 +26,6 @@ import {
   OPTIMISM_SEPOLIA,
   POLYGON,
   POLYGON_AMOY,
-  POLYGON_MUMBAI,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
   SCROLL,
@@ -63,7 +62,6 @@ type Chain =
   | typeof OPTIMISM_SEPOLIA
   | typeof POLYGON
   | typeof POLYGON_AMOY
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
   | typeof SCROLL
@@ -127,8 +125,6 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
       return `https://${appName}.matic.quiknode.pro/${appKey}`;
     case POLYGON_AMOY:
       return `https://${appName}.matic-amoy.quiknode.pro/${appKey}`;
-    case POLYGON_MUMBAI:
-      return `https://${appName}.matic-testnet.quiknode.pro/${appKey}`;
     case POLYGON_ZKEVM:
       return `https://${appName}.zkevm-mainnet.quiknode.pro/${appKey}`;
     case POLYGON_ZKEVM_TESTNET:

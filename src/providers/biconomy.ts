@@ -1,4 +1,4 @@
-import {
+import type {
   ARBITRUM,
   ARBITRUM_SEPOLIA,
   ARBITRUM_GOERLI,
@@ -9,7 +9,6 @@ import {
   SEPOLIA,
   GOERLI,
   POLYGON,
-  POLYGON_MUMBAI,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
   OPTIMISM,
@@ -51,7 +50,6 @@ type Chain =
   | typeof SEPOLIA
   | typeof GOERLI
   | typeof POLYGON
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
   | typeof OPTIMISM

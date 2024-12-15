@@ -2,7 +2,6 @@ import {
   ETHEREUM,
   SEPOLIA,
   POLYGON,
-  POLYGON_MUMBAI,
   POLYGON_AMOY,
   ARBITRUM,
   ARBITRUM_SEPOLIA,
@@ -20,7 +19,6 @@ type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof POLYGON
-  | typeof POLYGON_MUMBAI
   | typeof POLYGON_AMOY
   | typeof ARBITRUM
   | typeof ARBITRUM_SEPOLIA
@@ -41,8 +39,6 @@ function endpoint(chain: Chain, key: string): string {
       return `https://eth-sepolia.g.alchemy.com/v2/${key}`;
     case POLYGON:
       return `https://polygon-mainnet.g.alchemy.com/v2/${key}`;
-    case POLYGON_MUMBAI:
-      return `https://polygon-mumbai.g.alchemy.com/v2/${key}`;
     case POLYGON_AMOY:
       return `https://polygon-amoy.g.alchemy.com/v2/${key}`;
     case ARBITRUM:
