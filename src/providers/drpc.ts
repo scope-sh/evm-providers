@@ -18,7 +18,6 @@ import {
   LINEA_GOERLI,
   BASE,
   BASE_SEPOLIA,
-  BASE_GOERLI,
   FANTOM,
   FANTOM_TESTNET,
   AVALANCHE_C,
@@ -84,7 +83,6 @@ type Chain =
   | typeof LINEA_GOERLI
   | typeof BASE
   | typeof BASE_SEPOLIA
-  | typeof BASE_GOERLI
   | typeof FANTOM
   | typeof FANTOM_TESTNET
   | typeof AVALANCHE_C
@@ -169,8 +167,6 @@ function endpoint(chain: Chain): string {
       return 'https://base.drpc.org';
     case BASE_SEPOLIA:
       return 'https://base-sepolia.drpc.org';
-    case BASE_GOERLI:
-      return 'https://base-goerli.drpc.org';
     case FANTOM:
       return 'https://fantom.drpc.org';
     case FANTOM_TESTNET:

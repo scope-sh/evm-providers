@@ -7,7 +7,6 @@ import {
   AVALANCHE_C,
   AVALANCHE_FUJI,
   BASE,
-  BASE_GOERLI,
   BASE_SEPOLIA,
   BLAST,
   BLAST_SEPOLIA,
@@ -52,7 +51,6 @@ type Chain =
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
   | typeof BASE
-  | typeof BASE_GOERLI
   | typeof BASE_SEPOLIA
   | typeof BLAST
   | typeof BLAST_SEPOLIA
@@ -105,8 +103,6 @@ function endpoint(chain: Chain, projectId: string): string {
       return `https://ava-testnet.blastapi.io/${projectId}/ext/bc/C/rpc`;
     case BASE:
       return `https://base-mainnet.blastapi.io/${projectId}`;
-    case BASE_GOERLI:
-      return `https://base-goerli.blastapi.io/${projectId}`;
     case BASE_SEPOLIA:
       return `https://base-sepolia.blastapi.io/${projectId}`;
     case BLAST:

@@ -6,7 +6,6 @@ import {
   AVALANCHE_C,
   AVALANCHE_FUJI,
   BASE,
-  BASE_GOERLI,
   BASE_SEPOLIA,
   BLAST,
   BLAST_SEPOLIA,
@@ -40,7 +39,6 @@ type Chain =
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
   | typeof BASE
-  | typeof BASE_GOERLI
   | typeof BASE_SEPOLIA
   | typeof BLAST
   | typeof BLAST_SEPOLIA
@@ -81,8 +79,6 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
       return `https://${appName}.avalanche-testnet.quiknode.pro/${appKey}`;
     case BASE:
       return `https://${appName}.base-mainnet.quiknode.pro/${appKey}`;
-    case BASE_GOERLI:
-      return `https://${appName}.base-goerli.quiknode.pro/${appKey}`;
     case BASE_SEPOLIA:
       return `https://${appName}.base-sepolia.quiknode.pro/${appKey}`;
     case BLAST:

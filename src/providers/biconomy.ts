@@ -15,7 +15,6 @@ import type {
   AVALANCHE_C,
   AVALANCHE_FUJI,
   BASE,
-  BASE_GOERLI,
   BASE_SEPOLIA,
   LINEA,
   LINEA_GOERLI,
@@ -54,7 +53,6 @@ type Chain =
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
   | typeof BASE
-  | typeof BASE_GOERLI
   | typeof BASE_SEPOLIA
   | typeof LINEA
   | typeof LINEA_GOERLI
