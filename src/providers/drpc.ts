@@ -2,7 +2,6 @@ import {
   ETHEREUM,
   SEPOLIA,
   HOLESKY,
-  GOERLI,
   BSC,
   BSC_TESTNET,
   POLYGON,
@@ -70,7 +69,6 @@ type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof HOLESKY
-  | typeof GOERLI
   | typeof BSC
   | typeof BSC_TESTNET
   | typeof POLYGON
@@ -141,8 +139,6 @@ function endpoint(chain: Chain): string {
       return 'https://sepolia.drpc.org';
     case HOLESKY:
       return 'https://holesky.drpc.org';
-    case GOERLI:
-      return 'https://goerli.drpc.org';
     case BSC:
       return 'https://bsc.drpc.org';
     case BSC_TESTNET:

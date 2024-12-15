@@ -15,7 +15,6 @@ import {
   BSC_TESTNET,
   ETHEREUM,
   SEPOLIA,
-  GOERLI,
   HOLESKY,
   FANTOM,
   FANTOM_TESTNET,
@@ -62,7 +61,6 @@ type Chain =
   | typeof BSC_TESTNET
   | typeof ETHEREUM
   | typeof SEPOLIA
-  | typeof GOERLI
   | typeof HOLESKY
   | typeof FANTOM
   | typeof FANTOM_TESTNET
@@ -125,8 +123,6 @@ function endpoint(chain: Chain, projectId: string): string {
       return `https://eth-mainnet.blastapi.io/${projectId}`;
     case SEPOLIA:
       return `https://eth-sepolia.blastapi.io/${projectId}`;
-    case GOERLI:
-      return `https://eth-goerli.blastapi.io/${projectId}`;
     case HOLESKY:
       return `https://eth-holesky.blastapi.io/${projectId}`;
     case FANTOM:

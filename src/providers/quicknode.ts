@@ -15,7 +15,6 @@ import {
   CELO,
   ETHEREUM,
   SEPOLIA,
-  GOERLI,
   HOLESKY,
   FANTOM,
   GNOSIS,
@@ -51,7 +50,6 @@ type Chain =
   | typeof CELO
   | typeof ETHEREUM
   | typeof SEPOLIA
-  | typeof GOERLI
   | typeof HOLESKY
   | typeof FANTOM
   | typeof GNOSIS
@@ -103,8 +101,6 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
       return `https://${appName}.quiknode.pro/${appKey}`;
     case SEPOLIA:
       return `https://${appName}.ethereum-sepolia.quiknode.pro/${appKey}`;
-    case GOERLI:
-      return `https://${appName}.ethereum-goerli.quiknode.pro/${appKey}`;
     case HOLESKY:
       return `https://${appName}.ethereum-holesky.quiknode.pro/${appKey}`;
     case FANTOM:

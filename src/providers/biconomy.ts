@@ -7,7 +7,6 @@ import type {
   BSC_TESTNET,
   ETHEREUM,
   SEPOLIA,
-  GOERLI,
   POLYGON,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
@@ -48,7 +47,6 @@ type Chain =
   | typeof BSC_TESTNET
   | typeof ETHEREUM
   | typeof SEPOLIA
-  | typeof GOERLI
   | typeof POLYGON
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET

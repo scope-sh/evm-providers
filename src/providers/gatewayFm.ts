@@ -1,6 +1,5 @@
 import {
   ETHEREUM,
-  GOERLI,
   FANTOM,
   LUKSO,
   LUKSO_TESTNET,
@@ -17,7 +16,6 @@ import {
 
 type Chain =
   | typeof ETHEREUM
-  | typeof GOERLI
   | typeof FANTOM
   | typeof LUKSO
   | typeof LUKSO_TESTNET
@@ -41,8 +39,6 @@ function endpoint(chain: Chain, region: Region, isArchival: boolean): string {
     switch (chain) {
       case ETHEREUM:
         return { name: 'ethereum', subName: 'mainnet' };
-      case GOERLI:
-        return { name: 'ethereum', subName: 'goerli' };
       case FANTOM:
         return { name: 'fantom', subName: 'mainnet' };
       case LUKSO:

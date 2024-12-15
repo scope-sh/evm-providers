@@ -1,7 +1,6 @@
 import {
   ETHEREUM,
   SEPOLIA,
-  GOERLI,
   HOLESKY,
   POLYGON,
   OPTIMISM,
@@ -21,7 +20,6 @@ import {
 type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
-  | typeof GOERLI
   | typeof HOLESKY
   | typeof POLYGON
   | typeof OPTIMISM
@@ -43,8 +41,6 @@ function endpoint(chain: Chain, accessKey: string): string {
       return `https://mainnet.gateway.tenderly.co/${accessKey}`;
     case SEPOLIA:
       return `https://sepolia.gateway.tenderly.co/${accessKey}`;
-    case GOERLI:
-      return `https://goerli.gateway.tenderly.co/${accessKey}`;
     case HOLESKY:
       return `https://holesky.gateway.tenderly.co/${accessKey}`;
     case POLYGON:

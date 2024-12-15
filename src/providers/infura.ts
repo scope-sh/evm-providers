@@ -1,6 +1,5 @@
 import {
   ETHEREUM,
-  GOERLI,
   SEPOLIA,
   LINEA,
   LINEA_GOERLI,
@@ -22,7 +21,6 @@ import {
 
 type Chain =
   | typeof ETHEREUM
-  | typeof GOERLI
   | typeof SEPOLIA
   | typeof LINEA
   | typeof LINEA_GOERLI
@@ -45,8 +43,6 @@ function endpoint(chain: Chain, key: string): string {
   switch (chain) {
     case ETHEREUM:
       return `https://mainnet.infura.io/v3/${key}`;
-    case GOERLI:
-      return `https://goerli.infura.io/v3/${key}`;
     case SEPOLIA:
       return `https://sepolia.infura.io/v3/${key}`;
     case LINEA:

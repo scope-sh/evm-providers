@@ -1,5 +1,4 @@
 const ETHEREUM = 1;
-const GOERLI = 5;
 const SEPOLIA = 11155111;
 const HOLESKY = 17000;
 const ARBITRUM = 42161;
@@ -106,7 +105,6 @@ const PGN_SEPOLIA = 58008;
 
 export {
   ETHEREUM,
-  GOERLI,
   SEPOLIA,
   HOLESKY,
   ARBITRUM,
