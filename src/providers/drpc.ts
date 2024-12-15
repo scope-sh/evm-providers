@@ -8,7 +8,6 @@ import {
   POLYGON_AMOY,
   ARBITRUM,
   ARBITRUM_SEPOLIA,
-  ARBITRUM_GOERLI,
   OPTIMISM,
   OPTIMISM_SEPOLIA,
   ZKSYNC_ERA,
@@ -73,7 +72,6 @@ type Chain =
   | typeof POLYGON_AMOY
   | typeof ARBITRUM
   | typeof ARBITRUM_SEPOLIA
-  | typeof ARBITRUM_GOERLI
   | typeof OPTIMISM
   | typeof OPTIMISM_SEPOLIA
   | typeof ZKSYNC_ERA
@@ -147,8 +145,6 @@ function endpoint(chain: Chain): string {
       return 'https://arbitrum.drpc.org';
     case ARBITRUM_SEPOLIA:
       return 'https://arbitrum-sepolia.drpc.org';
-    case ARBITRUM_GOERLI:
-      return 'https://arbitrum-testnet.drpc.org';
     case OPTIMISM:
       return 'https://optimism.drpc.org';
     case OPTIMISM_SEPOLIA:

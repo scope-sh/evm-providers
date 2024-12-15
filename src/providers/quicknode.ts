@@ -1,6 +1,5 @@
 import {
   ARBITRUM,
-  ARBITRUM_GOERLI,
   ARBITRUM_SEPOLIA,
   ARBITRUM_NOVA,
   AVALANCHE_C,
@@ -33,7 +32,6 @@ import {
 
 type Chain =
   | typeof ARBITRUM
-  | typeof ARBITRUM_GOERLI
   | typeof ARBITRUM_SEPOLIA
   | typeof ARBITRUM_NOVA
   | typeof AVALANCHE_C
@@ -67,8 +65,6 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
   switch (chain) {
     case ARBITRUM:
       return `https://${appName}.arbitrum-mainnet.quiknode.pro/${appKey}`;
-    case ARBITRUM_GOERLI:
-      return `https://${appName}.arbitrum-goerli.quiknode.pro/${appKey}`;
     case ARBITRUM_SEPOLIA:
       return `https://${appName}.arbitrum-sepolia.quiknode.pro/${appKey}`;
     case ARBITRUM_NOVA:

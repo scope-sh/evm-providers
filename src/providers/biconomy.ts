@@ -1,7 +1,6 @@
 import type {
   ARBITRUM,
   ARBITRUM_SEPOLIA,
-  ARBITRUM_GOERLI,
   ARBITRUM_NOVA,
   BSC,
   BSC_TESTNET,
@@ -39,7 +38,6 @@ import type {
 type Chain =
   | typeof ARBITRUM
   | typeof ARBITRUM_SEPOLIA
-  | typeof ARBITRUM_GOERLI
   | typeof ARBITRUM_NOVA
   | typeof BSC
   | typeof BSC_TESTNET

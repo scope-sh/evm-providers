@@ -8,7 +8,6 @@ import {
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
   ARBITRUM,
-  ARBITRUM_GOERLI,
   GNOSIS,
   GNOSIS_CHIADO,
 } from '../utils/chains.js';
@@ -23,7 +22,6 @@ type Chain =
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
   | typeof ARBITRUM
-  | typeof ARBITRUM_GOERLI
   | typeof GNOSIS
   | typeof GNOSIS_CHIADO;
 
@@ -53,8 +51,6 @@ function endpoint(chain: Chain, region: Region, isArchival: boolean): string {
         return { name: 'polygon-zkevm', subName: 'testnet' };
       case ARBITRUM:
         return { name: 'arbitrum', subName: 'arb1' };
-      case ARBITRUM_GOERLI:
-        return { name: 'arbitrum', subName: 'goerli' };
       case GNOSIS:
         return { name: 'gnosis', subName: 'mainnet' };
       case GNOSIS_CHIADO:

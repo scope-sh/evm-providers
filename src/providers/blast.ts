@@ -1,6 +1,5 @@
 import {
   ARBITRUM,
-  ARBITRUM_GOERLI,
   ARBITRUM_SEPOLIA,
   ARBITRUM_NOVA,
   ASTAR,
@@ -44,7 +43,6 @@ import {
 
 type Chain =
   | typeof ARBITRUM
-  | typeof ARBITRUM_GOERLI
   | typeof ARBITRUM_SEPOLIA
   | typeof ARBITRUM_NOVA
   | typeof ASTAR
@@ -89,8 +87,6 @@ function endpoint(chain: Chain, projectId: string): string {
   switch (chain) {
     case ARBITRUM:
       return `https://arbitrum-one.blastapi.io/${projectId}`;
-    case ARBITRUM_GOERLI:
-      return `https://arbitrum-goerli.blastapi.io/${projectId}`;
     case ARBITRUM_SEPOLIA:
       return `https://arbitrum-sepolia.blastapi.io/${projectId}`;
     case ARBITRUM_NOVA:
