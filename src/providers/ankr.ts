@@ -26,7 +26,6 @@ import {
   SCROLL_SEPOLIA,
   ZKSYNC_ERA,
   ZKSYNC_ERA_SEPOLIA,
-  ZKSYNC_ERA_GOERLI,
   BLAST,
   BLAST_SEPOLIA,
   MANTLE,
@@ -65,7 +64,6 @@ type Chain =
   | typeof SCROLL_SEPOLIA
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA
-  | typeof ZKSYNC_ERA_GOERLI
   | typeof BLAST
   | typeof BLAST_SEPOLIA
   | typeof MANTLE
@@ -131,8 +129,6 @@ function endpoint(chain: Chain): string {
       return 'https://rpc.ankr.com/zksync_era';
     case ZKSYNC_ERA_SEPOLIA:
       return 'https://rpc.ankr.com/zksync_era_sepolia';
-    case ZKSYNC_ERA_GOERLI:
-      return 'https://rpc.ankr.com/zksync_era_testnet';
     case BLAST:
       return 'https://rpc.ankr.com/blast';
     case BLAST_SEPOLIA:

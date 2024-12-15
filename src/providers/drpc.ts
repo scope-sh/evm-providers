@@ -12,7 +12,6 @@ import {
   OPTIMISM_SEPOLIA,
   ZKSYNC_ERA,
   ZKSYNC_ERA_SEPOLIA,
-  ZKSYNC_ERA_GOERLI,
   LINEA,
   LINEA_GOERLI,
   BASE,
@@ -76,7 +75,6 @@ type Chain =
   | typeof OPTIMISM_SEPOLIA
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA
-  | typeof ZKSYNC_ERA_GOERLI
   | typeof LINEA
   | typeof LINEA_GOERLI
   | typeof BASE
@@ -153,8 +151,6 @@ function endpoint(chain: Chain): string {
       return 'https://zksync.drpc.org';
     case ZKSYNC_ERA_SEPOLIA:
       return 'https://zksync-testnet.drpc.org';
-    case ZKSYNC_ERA_GOERLI:
-      return 'https://zksync-sepolia.drpc.org';
     case LINEA:
       return 'https://linea.drpc.org';
     case LINEA_GOERLI:
