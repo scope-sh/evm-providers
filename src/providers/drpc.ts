@@ -25,7 +25,6 @@ import {
   SCROLL_SEPOLIA,
   MANTLE,
   MANTLE_SEPOLIA,
-  MANTLE_GOERLI,
   ARBITRUM_NOVA,
   AURORA,
   AURORA_TESTNET,
@@ -87,7 +86,6 @@ type Chain =
   | typeof SCROLL_SEPOLIA
   | typeof MANTLE
   | typeof MANTLE_SEPOLIA
-  | typeof MANTLE_GOERLI
   | typeof ARBITRUM_NOVA
   | typeof AURORA
   | typeof AURORA_TESTNET
@@ -175,8 +173,6 @@ function endpoint(chain: Chain): string {
       return 'https://mantle.drpc.org';
     case MANTLE_SEPOLIA:
       return 'https://mantle-sepolia.drpc.org';
-    case MANTLE_GOERLI:
-      return 'https://mantle-testnet.drpc.org';
     case ARBITRUM_NOVA:
       return 'https://arbitrum-nova.drpc.org';
     case AURORA:

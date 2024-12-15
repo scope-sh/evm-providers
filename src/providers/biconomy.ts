@@ -24,7 +24,6 @@ import type {
   MANTA_PACIFIC,
   MANTA_PACIFIC_TESTNET,
   MANTLE,
-  MANTLE_GOERLI,
   COMBO,
   COMBO_TESTNET,
   BLAST,
@@ -60,7 +59,6 @@ type Chain =
   | typeof MANTA_PACIFIC
   | typeof MANTA_PACIFIC_TESTNET
   | typeof MANTLE
-  | typeof MANTLE_GOERLI
   | typeof COMBO
   | typeof COMBO_TESTNET
   | typeof BLAST

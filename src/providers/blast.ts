@@ -20,7 +20,6 @@ import {
   GNOSIS_CHIADO,
   LINEA,
   MANTLE,
-  MANTLE_GOERLI,
   MANTLE_SEPOLIA,
   MODE,
   MODE_SEPOLIA,
@@ -62,7 +61,6 @@ type Chain =
   | typeof GNOSIS_CHIADO
   | typeof LINEA
   | typeof MANTLE
-  | typeof MANTLE_GOERLI
   | typeof MANTLE_SEPOLIA
   | typeof MODE
   | typeof MODE_SEPOLIA
@@ -125,8 +123,6 @@ function endpoint(chain: Chain, projectId: string): string {
       return `https://linea-mainnet.blastapi.io/${projectId}`;
     case MANTLE:
       return `https://mantle-mainnet.blastapi.io/${projectId}`;
-    case MANTLE_GOERLI:
-      return `https://mantle-goerli.blastapi.io/${projectId}`;
     case MANTLE_SEPOLIA:
       return `https://mantle-sepolia.blastapi.io/${projectId}`;
     case MODE:
