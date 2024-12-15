@@ -16,7 +16,6 @@ import type {
   BASE,
   BASE_SEPOLIA,
   LINEA,
-  LINEA_GOERLI,
   ASTAR,
   OP_BNB,
   OP_BNB_TESTNET,
@@ -53,7 +52,6 @@ type Chain =
   | typeof BASE
   | typeof BASE_SEPOLIA
   | typeof LINEA
-  | typeof LINEA_GOERLI
   | typeof ASTAR
   | typeof OP_BNB
   | typeof OP_BNB_TESTNET

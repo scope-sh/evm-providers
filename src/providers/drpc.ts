@@ -13,7 +13,6 @@ import {
   ZKSYNC_ERA,
   ZKSYNC_ERA_SEPOLIA,
   LINEA,
-  LINEA_GOERLI,
   BASE,
   BASE_SEPOLIA,
   FANTOM,
@@ -76,7 +75,6 @@ type Chain =
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA
   | typeof LINEA
-  | typeof LINEA_GOERLI
   | typeof BASE
   | typeof BASE_SEPOLIA
   | typeof FANTOM
@@ -153,8 +151,6 @@ function endpoint(chain: Chain): string {
       return 'https://zksync-testnet.drpc.org';
     case LINEA:
       return 'https://linea.drpc.org';
-    case LINEA_GOERLI:
-      return 'https://linea-goerli.drpc.org';
     case BASE:
       return 'https://base.drpc.org';
     case BASE_SEPOLIA:

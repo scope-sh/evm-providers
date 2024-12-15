@@ -2,7 +2,6 @@ import {
   ETHEREUM,
   SEPOLIA,
   LINEA,
-  LINEA_GOERLI,
   POLYGON,
   POLYGON_AMOY,
   BLAST,
@@ -23,7 +22,6 @@ type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof LINEA
-  | typeof LINEA_GOERLI
   | typeof POLYGON
   | typeof POLYGON_AMOY
   | typeof BLAST
@@ -47,8 +45,6 @@ function endpoint(chain: Chain, key: string): string {
       return `https://sepolia.infura.io/v3/${key}`;
     case LINEA:
       return `https://linea-mainnet.infura.io/v3/${key}`;
-    case LINEA_GOERLI:
-      return `https://linea-goerli.infura.io/v3/${key}`;
     case POLYGON:
       return `https://polygon-mainnet.infura.io/v3/${key}`;
     case POLYGON_AMOY:

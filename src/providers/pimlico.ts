@@ -1,4 +1,4 @@
-import {
+import type {
   ARBITRUM,
   ARBITRUM_NOVA,
   ARBITRUM_SEPOLIA,
@@ -24,7 +24,6 @@ import {
   KLAYTN_BAOBAB,
   KLAYTN,
   LINEA,
-  LINEA_GOERLI,
   LYRA,
   MANTLE,
   MODE,
@@ -74,7 +73,6 @@ type Chain =
   | typeof KLAYTN_BAOBAB
   | typeof KLAYTN
   | typeof LINEA
-  | typeof LINEA_GOERLI
   | typeof LYRA
   | typeof MANTLE
   | typeof MODE
