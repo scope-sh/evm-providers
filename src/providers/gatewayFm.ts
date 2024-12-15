@@ -4,7 +4,6 @@ import {
   LUKSO,
   LUKSO_TESTNET,
   OPTIMISM,
-  OPTIMISM_GOERLI,
   POLYGON,
   POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
@@ -20,7 +19,6 @@ type Chain =
   | typeof LUKSO
   | typeof LUKSO_TESTNET
   | typeof OPTIMISM
-  | typeof OPTIMISM_GOERLI
   | typeof POLYGON
   | typeof POLYGON_ZKEVM
   | typeof POLYGON_ZKEVM_TESTNET
@@ -47,8 +45,6 @@ function endpoint(chain: Chain, region: Region, isArchival: boolean): string {
         return { name: 'lukso', subName: 'testnet' };
       case OPTIMISM:
         return { name: 'optimism', subName: 'mainnet' };
-      case OPTIMISM_GOERLI:
-        return { name: 'optimism', subName: 'goerli' };
       case POLYGON:
         return { name: 'polygon', subName: 'mainnet' };
       case POLYGON_ZKEVM:

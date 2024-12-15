@@ -31,7 +31,6 @@ import {
   MOONBEAM,
   MOONRIVER,
   OPTIMISM,
-  OPTIMISM_GOERLI,
   OPTIMISM_SEPOLIA,
   PALM,
   PALM_TESTNET,
@@ -77,7 +76,6 @@ type Chain =
   | typeof MOONBEAM
   | typeof MOONRIVER
   | typeof OPTIMISM
-  | typeof OPTIMISM_GOERLI
   | typeof OPTIMISM_SEPOLIA
   | typeof PALM
   | typeof PALM_TESTNET
@@ -155,8 +153,6 @@ function endpoint(chain: Chain, projectId: string): string {
       return `https://moonriver.blastapi.io/${projectId}`;
     case OPTIMISM:
       return `https://optimism-mainnet.blastapi.io/${projectId}`;
-    case OPTIMISM_GOERLI:
-      return `https://optimism-goerli.blastapi.io/${projectId}`;
     case OPTIMISM_SEPOLIA:
       return `https://optimism-sepolia.blastapi.io/${projectId}`;
     case PALM:

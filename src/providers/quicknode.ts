@@ -21,7 +21,6 @@ import {
   IMMUTABLE_ZKEVM,
   IMMUTABLE_ZKEVM_TESTNET,
   OPTIMISM,
-  OPTIMISM_GOERLI,
   OPTIMISM_SEPOLIA,
   POLYGON,
   POLYGON_AMOY,
@@ -56,7 +55,6 @@ type Chain =
   | typeof IMMUTABLE_ZKEVM
   | typeof IMMUTABLE_ZKEVM_TESTNET
   | typeof OPTIMISM
-  | typeof OPTIMISM_GOERLI
   | typeof OPTIMISM_SEPOLIA
   | typeof POLYGON
   | typeof POLYGON_AMOY
@@ -113,8 +111,6 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
       return `https://${appName}.imx-testnet.quiknode.pro/${appKey}`;
     case OPTIMISM:
       return `https://${appName}.optimism.quiknode.pro/${appKey}`;
-    case OPTIMISM_GOERLI:
-      return `https://${appName}.optimism-goerli.quiknode.pro/${appKey}`;
     case OPTIMISM_SEPOLIA:
       return `https://${appName}.optimism-sepolia.quiknode.pro/${appKey}`;
     case POLYGON:

@@ -11,7 +11,6 @@ import {
   ARBITRUM_GOERLI,
   OPTIMISM,
   OPTIMISM_SEPOLIA,
-  OPTIMISM_GOERLI,
   ZKSYNC_ERA,
   ZKSYNC_ERA_SEPOLIA,
   ZKSYNC_ERA_GOERLI,
@@ -78,7 +77,6 @@ type Chain =
   | typeof ARBITRUM_GOERLI
   | typeof OPTIMISM
   | typeof OPTIMISM_SEPOLIA
-  | typeof OPTIMISM_GOERLI
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA
   | typeof ZKSYNC_ERA_GOERLI
@@ -157,8 +155,6 @@ function endpoint(chain: Chain): string {
       return 'https://optimism.drpc.org';
     case OPTIMISM_SEPOLIA:
       return 'https://optimism-sepolia.drpc.org';
-    case OPTIMISM_GOERLI:
-      return 'https://optimism-testnet.drpc.org';
     case ZKSYNC_ERA:
       return 'https://zksync.drpc.org';
     case ZKSYNC_ERA_SEPOLIA:

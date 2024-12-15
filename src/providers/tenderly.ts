@@ -5,7 +5,6 @@ import {
   POLYGON,
   POLYGON_AMOY,
   OPTIMISM,
-  OPTIMISM_GOERLI,
   OPTIMISM_SEPOLIA,
   ARBITRUM,
   ARBITRUM_NOVA,
@@ -33,7 +32,6 @@ type Chain =
   | typeof POLYGON
   | typeof POLYGON_AMOY
   | typeof OPTIMISM
-  | typeof OPTIMISM_GOERLI
   | typeof OPTIMISM_SEPOLIA
   | typeof ARBITRUM
   | typeof ARBITRUM_NOVA
@@ -67,8 +65,6 @@ function endpoint(chain: Chain, accessKey: string): string {
       return `https://polygon-amoy.gateway.tenderly.co/${accessKey}`;
     case OPTIMISM:
       return `https://optimism.gateway.tenderly.co/${accessKey}`;
-    case OPTIMISM_GOERLI:
-      return `https://optimism-goerli.gateway.tenderly.co/${accessKey}`;
     case OPTIMISM_SEPOLIA:
       return `https://optimism-sepolia.gateway.tenderly.co/${accessKey}`;
     case ARBITRUM:
