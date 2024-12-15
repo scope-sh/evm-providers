@@ -15,7 +15,6 @@ import {
   BASE_SEPOLIA,
   BLAST,
   BOBA_ETHEREUM,
-  BOBA_GOERLI,
   BOBA_SEPOLIA,
   BOBA_BNB,
   BOBA_BNB_TESTNET,
@@ -42,7 +41,6 @@ type Chain =
   | typeof BASE_SEPOLIA
   | typeof BLAST
   | typeof BOBA_ETHEREUM
-  | typeof BOBA_GOERLI
   | typeof BOBA_SEPOLIA
   | typeof BOBA_BNB
   | typeof BOBA_BNB_TESTNET
@@ -85,8 +83,6 @@ function endpoint(chain: Chain, accessKey: string): string {
       return `https://blast.gateway.tenderly.co/${accessKey}`;
     case BOBA_ETHEREUM:
       return `https://boba-ethereum.gateway.tenderly.co/${accessKey}`;
-    case BOBA_GOERLI:
-      return `https://boba-goerli.gateway.tenderly.co/${accessKey}`;
     case BOBA_SEPOLIA:
       return `https://boba-sepolia.gateway.tenderly.co/${accessKey}`;
     case BOBA_BNB:
