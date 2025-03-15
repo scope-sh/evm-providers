@@ -1,39 +1,41 @@
 import {
-  ARBITRUM,
-  ARBITRUM_SEPOLIA,
   ARBITRUM_NOVA,
+  ARBITRUM_SEPOLIA,
+  ARBITRUM,
   AVALANCHE_C,
   AVALANCHE_FUJI,
-  BASE,
   BASE_SEPOLIA,
-  BLAST,
+  BASE,
   BLAST_SEPOLIA,
-  BSC,
+  BLAST,
   BSC_TESTNET,
+  BSC,
   CELO,
   ETHEREUM,
-  SEPOLIA,
-  HOLESKY,
   FANTOM,
   GNOSIS,
-  IMMUTABLE_ZKEVM,
+  HOLESKY,
   IMMUTABLE_ZKEVM_TESTNET,
-  OPTIMISM,
+  IMMUTABLE_ZKEVM,
+  LINEA,
+  MODE,
   OPTIMISM_SEPOLIA,
-  POLYGON,
+  OPTIMISM,
   POLYGON_AMOY,
-  POLYGON_ZKEVM,
   POLYGON_ZKEVM_TESTNET,
-  SCROLL,
+  POLYGON_ZKEVM,
+  POLYGON,
   SCROLL_SEPOLIA,
-  ZKSYNC_ERA,
+  SCROLL,
+  SEPOLIA,
   ZKSYNC_ERA_SEPOLIA,
+  ZKSYNC_ERA,
 } from '../utils/chains.js';
 
 type Chain =
   | typeof ARBITRUM
-  | typeof ARBITRUM_SEPOLIA
   | typeof ARBITRUM_NOVA
+  | typeof ARBITRUM_SEPOLIA
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
   | typeof BASE
@@ -44,12 +46,13 @@ type Chain =
   | typeof BSC_TESTNET
   | typeof CELO
   | typeof ETHEREUM
-  | typeof SEPOLIA
-  | typeof HOLESKY
   | typeof FANTOM
   | typeof GNOSIS
+  | typeof HOLESKY
   | typeof IMMUTABLE_ZKEVM
   | typeof IMMUTABLE_ZKEVM_TESTNET
+  | typeof LINEA
+  | typeof MODE
   | typeof OPTIMISM
   | typeof OPTIMISM_SEPOLIA
   | typeof POLYGON
@@ -58,6 +61,7 @@ type Chain =
   | typeof POLYGON_ZKEVM_TESTNET
   | typeof SCROLL
   | typeof SCROLL_SEPOLIA
+  | typeof SEPOLIA
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA;
 
@@ -101,6 +105,10 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
       return `https://${appName}.imx-mainnet.quiknode.pro/${appKey}`;
     case IMMUTABLE_ZKEVM_TESTNET:
       return `https://${appName}.imx-testnet.quiknode.pro/${appKey}`;
+    case LINEA:
+      return `https://${appName}.linea-mainnet.quiknode.pro/${appKey}`;
+    case MODE:
+      return `https://${appName}.mode-mainnet.quiknode.pro/${appKey}`;
     case OPTIMISM:
       return `https://${appName}.optimism.quiknode.pro/${appKey}`;
     case OPTIMISM_SEPOLIA:
