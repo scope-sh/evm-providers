@@ -11,6 +11,7 @@ import {
   ARBITRUM_SEPOLIA,
   AVALANCHE_C,
   AVALANCHE_FUJI,
+  LINEA,
   BASE,
   BASE_SEPOLIA,
   BLAST,
@@ -37,6 +38,7 @@ type Chain =
   | typeof ARBITRUM_SEPOLIA
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
+  | typeof LINEA
   | typeof BASE
   | typeof BASE_SEPOLIA
   | typeof BLAST
@@ -75,6 +77,8 @@ function endpoint(chain: Chain, accessKey: string): string {
       return `https://avalanche.gateway.tenderly.co/${accessKey}`;
     case AVALANCHE_FUJI:
       return `https://avalanche-fuji.gateway.tenderly.co/${accessKey}`;
+    case LINEA:
+      return `https://linea.gateway.tenderly.co/${accessKey}`;
     case BASE:
       return `https://base.gateway.tenderly.co/${accessKey}`;
     case BASE_SEPOLIA:
