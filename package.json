@@ -1,6 +1,6 @@
 {
   "name": "evm-providers",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "JSON-RPC Provider Registry for EVM chains",
   "author": {
     "name": "Timur Badretdinov",
