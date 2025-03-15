@@ -72,7 +72,7 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
     case ARBITRUM_SEPOLIA:
       return `https://${appName}.arbitrum-sepolia.quiknode.pro/${appKey}`;
     case ARBITRUM_NOVA:
-      return `https://${appName}.arbitrum-nova.quiknode.pro/${appKey}`;
+      return `https://${appName}.nova-mainnet.quiknode.pro/${appKey}`;
     case AVALANCHE_C:
       return `https://${appName}.avalanche-mainnet.quiknode.pro/${appKey}`;
     case AVALANCHE_FUJI:
@@ -100,7 +100,7 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
     case FANTOM:
       return `https://${appName}.fantom.quiknode.pro/${appKey}`;
     case GNOSIS:
-      return `https://${appName}.gnosis.quiknode.pro/${appKey}`;
+      return `https://${appName}.xdai.quiknode.pro/${appKey}`;
     case IMMUTABLE_ZKEVM:
       return `https://${appName}.imx-mainnet.quiknode.pro/${appKey}`;
     case IMMUTABLE_ZKEVM_TESTNET:
@@ -128,7 +128,7 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
     case ZKSYNC_ERA:
       return `https://${appName}.zksync-mainnet.quiknode.pro/${appKey}`;
     case ZKSYNC_ERA_SEPOLIA:
-      return `https://${appName}.zksync-era-sepolia.quiknode.pro/${appKey}`;
+      return `https://${appName}.zksync-sepolia.quiknode.pro/${appKey}`;
   }
 }
 
