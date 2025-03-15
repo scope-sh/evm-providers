@@ -13,6 +13,11 @@ import {
   BASE,
   BASE_SEPOLIA,
   ASTAR,
+  LINEA,
+  ARBITRUM_NOVA,
+  AVALANCHE_C,
+  AVALANCHE_FUJI,
+  GNOSIS,
 } from '../utils/chains.js';
 
 type Chain =
@@ -29,7 +34,12 @@ type Chain =
   | typeof POLYGON_ZKEVM_CARDONA
   | typeof BASE
   | typeof BASE_SEPOLIA
-  | typeof ASTAR;
+  | typeof ASTAR
+  | typeof LINEA
+  | typeof ARBITRUM_NOVA
+  | typeof AVALANCHE_C
+  | typeof AVALANCHE_FUJI
+  | typeof GNOSIS;
 
 function endpoint(chain: Chain, key: string): string {
   switch (chain) {
@@ -61,6 +71,16 @@ function endpoint(chain: Chain, key: string): string {
       return `https://base-sepolia.g.alchemy.com/v2/${key}`;
     case ASTAR:
       return `https://astar-mainnet.g.alchemy.com/v2/${key}`;
+    case LINEA:
+      return `https://linea-mainnet.g.alchemy.com/v2/${key}`;
+    case ARBITRUM_NOVA:
+      return `https://arbnova-mainnet.g.alchemy.com/v2/${key}`;
+    case AVALANCHE_C:
+      return `https://avax-mainnet.g.alchemy.com/v2/${key}`;
+    case AVALANCHE_FUJI:
+      return `https://avax-fuji.g.alchemy.com/v2/${key}`;
+    case GNOSIS:
+      return `https://gnosis-mainnet.g.alchemy.com/v2/${key}`;
   }
 }
 
