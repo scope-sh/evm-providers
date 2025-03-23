@@ -18,6 +18,8 @@ import {
   AVALANCHE_C,
   AVALANCHE_FUJI,
   GNOSIS,
+  BSC,
+  BSC_TESTNET,
 } from '../utils/chains.js';
 
 type Chain =
@@ -39,7 +41,9 @@ type Chain =
   | typeof ARBITRUM_NOVA
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
-  | typeof GNOSIS;
+  | typeof GNOSIS
+  | typeof BSC
+  | typeof BSC_TESTNET;
 
 function endpoint(chain: Chain, key: string): string {
   switch (chain) {
@@ -81,6 +85,10 @@ function endpoint(chain: Chain, key: string): string {
       return `https://avax-fuji.g.alchemy.com/v2/${key}`;
     case GNOSIS:
       return `https://gnosis-mainnet.g.alchemy.com/v2/${key}`;
+    case BSC:
+      return `https://bnb-mainnet.g.alchemy.com/v2/${key}`;
+    case BSC_TESTNET:
+      return `https://bnb-testnet.g.alchemy.com/v2/${key}`;
   }
 }
 
