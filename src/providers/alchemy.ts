@@ -14,12 +14,20 @@ import {
   BASE_SEPOLIA,
   ASTAR,
   LINEA,
+  LINEA_SEPOLIA,
   ARBITRUM_NOVA,
   AVALANCHE_C,
   AVALANCHE_FUJI,
   GNOSIS,
   BSC,
   BSC_TESTNET,
+  SCROLL,
+  SCROLL_SEPOLIA,
+  CELO,
+  CELO_ALFAJORES,
+  CELO_BAKLAVA,
+  WORLDCHAIN,
+  WORLDCHAIN_SEPOLIA,
 } from '../utils/chains.js';
 
 type Chain =
@@ -38,12 +46,20 @@ type Chain =
   | typeof BASE_SEPOLIA
   | typeof ASTAR
   | typeof LINEA
+  | typeof LINEA_SEPOLIA
   | typeof ARBITRUM_NOVA
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
   | typeof GNOSIS
   | typeof BSC
-  | typeof BSC_TESTNET;
+  | typeof BSC_TESTNET
+  | typeof SCROLL
+  | typeof SCROLL_SEPOLIA
+  | typeof CELO
+  | typeof CELO_ALFAJORES
+  | typeof CELO_BAKLAVA
+  | typeof WORLDCHAIN
+  | typeof WORLDCHAIN_SEPOLIA;
 
 function endpoint(chain: Chain, key: string): string {
   switch (chain) {
@@ -77,6 +93,8 @@ function endpoint(chain: Chain, key: string): string {
       return `https://astar-mainnet.g.alchemy.com/v2/${key}`;
     case LINEA:
       return `https://linea-mainnet.g.alchemy.com/v2/${key}`;
+    case LINEA_SEPOLIA:
+      return `https://linea-sepolia.g.alchemy.com/v2/${key}`;
     case ARBITRUM_NOVA:
       return `https://arbnova-mainnet.g.alchemy.com/v2/${key}`;
     case AVALANCHE_C:
@@ -89,6 +107,20 @@ function endpoint(chain: Chain, key: string): string {
       return `https://bnb-mainnet.g.alchemy.com/v2/${key}`;
     case BSC_TESTNET:
       return `https://bnb-testnet.g.alchemy.com/v2/${key}`;
+    case SCROLL:
+      return `https://scroll-mainnet.g.alchemy.com/v2/${key}`;
+    case SCROLL_SEPOLIA:
+      return `https://scroll-sepolia.g.alchemy.com/v2/${key}`;
+    case CELO:
+      return `https://celo-mainnet.g.alchemy.com/v2/${key}`;
+    case CELO_ALFAJORES:
+      return `https://celo-alfajores.g.alchemy.com/v2/${key}`;
+    case CELO_BAKLAVA:
+      return `https://celo-baklava.g.alchemy.com/v2/${key}`;
+    case WORLDCHAIN:
+      return `https://worldchain-mainnet.g.alchemy.com/v2/${key}`;
+    case WORLDCHAIN_SEPOLIA:
+      return `https://worldchain-sepolia.g.alchemy.com/v2/${key}`;
   }
 }
 
