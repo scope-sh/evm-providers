@@ -28,6 +28,7 @@ import {
   SCROLL_SEPOLIA,
   SCROLL,
   SEPOLIA,
+  MONAD_TESTNET,
   ZKSYNC_ERA_SEPOLIA,
   ZKSYNC_ERA,
 } from '../utils/chains.js';
@@ -62,6 +63,7 @@ type Chain =
   | typeof SCROLL
   | typeof SCROLL_SEPOLIA
   | typeof SEPOLIA
+  | typeof MONAD_TESTNET
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA;
 
@@ -125,6 +127,8 @@ function endpoint(chain: Chain, appName: string, appKey: string): string {
       return `https://${appName}.scroll-mainnet.quiknode.pro/${appKey}`;
     case SCROLL_SEPOLIA:
       return `https://${appName}.scroll-testnet.quiknode.pro/${appKey}`;
+    case MONAD_TESTNET:
+      return `https://${appName}.monad-testnet.quiknode.pro/${appKey}`;
     case ZKSYNC_ERA:
       return `https://${appName}.zksync-mainnet.quiknode.pro/${appKey}`;
     case ZKSYNC_ERA_SEPOLIA:
