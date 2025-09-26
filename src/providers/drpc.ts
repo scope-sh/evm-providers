@@ -121,126 +121,130 @@ type Chain =
   | typeof ZORA
   | typeof ZORA_SEPOLIA;
 
-function endpoint(chain: Chain): string {
+function makeEndpoint(chainStr: string, key?: string): string {
+  return key ? `https://lb.drpc.org/${chainStr}/${key}` : `https://${chainStr}.drpc.org`;
+} 
+
+function endpoint(chain: Chain, key?: string): string {
   switch (chain) {
     case ETHEREUM:
-      return 'https://eth.drpc.org';
+      return makeEndpoint('eth', key);
     case SEPOLIA:
-      return 'https://sepolia.drpc.org';
+      return makeEndpoint('sepolia', key);
     case HOLESKY:
-      return 'https://holesky.drpc.org';
+      return makeEndpoint('holesky', key);
     case BSC:
-      return 'https://bsc.drpc.org';
+      return makeEndpoint('bsc', key);
     case BSC_TESTNET:
-      return 'https://bsc-testnet.drpc.org';
+      return makeEndpoint('bsc-testnet', key);
     case POLYGON:
-      return 'https://polygon.drpc.org';
+      return makeEndpoint('polygon', key);
     case POLYGON_AMOY:
-      return 'https://polygon-amoy.drpc.org';
+      return makeEndpoint('polygon-amoy', key);
     case ARBITRUM:
-      return 'https://arbitrum.drpc.org';
+      return makeEndpoint('arbitrum', key);
     case ARBITRUM_SEPOLIA:
-      return 'https://arbitrum-sepolia.drpc.org';
+      return makeEndpoint('arbitrum-sepolia', key);
     case OPTIMISM:
-      return 'https://optimism.drpc.org';
+      return makeEndpoint('optimism', key);
     case OPTIMISM_SEPOLIA:
-      return 'https://optimism-sepolia.drpc.org';
+      return makeEndpoint('optimism-sepolia', key);
     case ZKSYNC_ERA:
-      return 'https://zksync.drpc.org';
+      return makeEndpoint('zksync', key);
     case ZKSYNC_ERA_SEPOLIA:
-      return 'https://zksync-testnet.drpc.org';
+      return makeEndpoint('zksync-testnet', key);
     case LINEA:
-      return 'https://linea.drpc.org';
+      return makeEndpoint('linea', key);
     case BASE:
-      return 'https://base.drpc.org';
+      return makeEndpoint('base', key);
     case BASE_SEPOLIA:
-      return 'https://base-sepolia.drpc.org';
+      return makeEndpoint('base-sepolia', key);
     case FANTOM:
-      return 'https://fantom.drpc.org';
+      return makeEndpoint('fantom', key);
     case FANTOM_TESTNET:
-      return 'https://fantom-testnet.drpc.org';
+      return makeEndpoint('fantom-testnet', key);
     case AVALANCHE_C:
-      return 'https://avalanche.drpc.org';
+      return makeEndpoint('avalanche', key);
     case AVALANCHE_FUJI:
-      return 'https://avalanche-fuji.drpc.org';
+      return makeEndpoint('avalanche-fuji', key);
     case GNOSIS:
-      return 'https://gnosis.drpc.org';
+      return makeEndpoint('gnosis', key);
     case GNOSIS_CHIADO:
-      return 'https://gnosis-chiado.drpc.org';
+      return makeEndpoint('gnosis-chiado', key);
     case SCROLL:
-      return 'https://scroll.drpc.org';
+      return makeEndpoint('scroll', key);
     case SCROLL_SEPOLIA:
-      return 'https://scroll-sepolia.drpc.org';
+      return makeEndpoint('scroll-sepolia', key);
     case MANTLE:
-      return 'https://mantle.drpc.org';
+      return makeEndpoint('mantle', key);
     case MANTLE_SEPOLIA:
-      return 'https://mantle-sepolia.drpc.org';
+      return makeEndpoint('mantle-sepolia', key);
     case ARBITRUM_NOVA:
-      return 'https://arbitrum-nova.drpc.org';
+      return makeEndpoint('arbitrum-nova', key);
     case AURORA:
-      return 'https://aurora.drpc.org';
+      return makeEndpoint('aurora', key);
     case AURORA_TESTNET:
-      return 'https://aurora-testnet.drpc.org';
+      return makeEndpoint('aurora-testnet', key);
     case POLYGON_ZKEVM:
-      return 'https://polygon-zkevm.drpc.org';
+      return makeEndpoint('polygon-zkevm', key);
     case POLYGON_ZKEVM_CARDONA:
-      return 'https://polygon-zkevm-cardona.drpc.org';
+      return makeEndpoint('polygon-zkevm-cardona', key);
     case KLAYTN:
-      return 'https://klaytn.drpc.org';
+      return makeEndpoint('klaytn', key);
     case KLAYTN_BAOBAB:
-      return 'https://klaytn-baobab.drpc.org';
+      return makeEndpoint('klaytn-baobab', key);
     case BLAST:
-      return 'https://blast.drpc.org';
+      return makeEndpoint('blast', key);
     case BLAST_SEPOLIA:
-      return 'https://blast-sepolia.drpc.org';
+      return makeEndpoint('blast-sepolia', key);
     case BOBA_BNB:
-      return 'https://boba-bnb.drpc.org';
+      return makeEndpoint('boba-bnb', key);
     case BOBA_ETHEREUM:
-      return 'https://boba-eth.drpc.org';
+      return makeEndpoint('boba-eth', key);
     case CELO:
-      return 'https://celo.drpc.org';
+      return makeEndpoint('celo', key);
     case CELO_ALFAJORES:
-      return 'https://celo-alfajores.drpc.org';
+      return makeEndpoint('celo-alfajores', key);
     case CELO_SEPOLIA:
-      return 'https://celo-sepolia.drpc.org';
+      return makeEndpoint('celo-sepolia', key);
     case CORE:
-      return 'https://core.drpc.org';
+      return makeEndpoint('core', key);
     case CORE_TESTNET:
-      return 'https://core-testnet.drpc.org';
+      return makeEndpoint('core-testnet', key);
     case HARMONY:
-      return 'https://harmony-0.drpc.org';
+      return makeEndpoint('harmony-0', key);
     case IMMUTABLE_ZKEVM:
-      return 'https://immutable-zkevm.drpc.org';
+      return makeEndpoint('immutable-zkevm', key);
     case IMMUTABLE_ZKEVM_TESTNET:
-      return 'https://immutable-zkevm-testnet.drpc.org';
+      return makeEndpoint('immutable-zkevm-testnet', key);
     case KAVA:
-      return 'https://kava.drpc.org';
+      return makeEndpoint('kava', key);
     case KAVA_TESTNET:
-      return 'https://kava-testnet.drpc.org';
+      return makeEndpoint('kava-testnet', key);
     case MANTA_PACIFIC:
-      return 'https://manta-pacific.drpc.org';
+      return makeEndpoint('manta-pacific', key);
     case MANTA_PACIFIC_TESTNET:
-      return 'https://manta-pacific-testnet.drpc.org';
+      return makeEndpoint('manta-pacific-testnet', key);
     case MODE:
-      return 'https://mode.drpc.org';
+      return makeEndpoint('mode', key);
     case MODE_SEPOLIA:
-      return 'https://mode-testnet.drpc.org';
+      return makeEndpoint('mode-testnet', key);
     case MOONBEAM:
-      return 'https://moonbeam.drpc.org';
+      return makeEndpoint('moonbeam', key);
     case MOONBASE_ALPHA:
-      return 'https://moonbase-alpha.drpc.org';
+      return makeEndpoint('moonbase-alpha', key);
     case MOONRIVER:
-      return 'https://moonriver.drpc.org';
+      return makeEndpoint('moonriver', key);
     case OP_BNB:
-      return 'https://opbnb.drpc.org';
+      return makeEndpoint('opbnb', key);
     case OP_BNB_TESTNET:
-      return 'https://opbnb-testnet.drpc.org';
+      return makeEndpoint('opbnb-testnet', key);
     case TAIKO_KATLA:
-      return 'https://taiko-katla.drpc.org';
+      return makeEndpoint('taiko-katla', key);
     case ZORA:
-      return 'https://zora.drpc.org';
+      return makeEndpoint('zora', key);
     case ZORA_SEPOLIA:
-      return 'https://zora-sepolia.drpc.org';
+      return makeEndpoint('zora-sepolia', key);
   }
 }
 
