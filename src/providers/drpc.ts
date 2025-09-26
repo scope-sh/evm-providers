@@ -38,6 +38,7 @@ import {
   BOBA_ETHEREUM,
   CELO,
   CELO_ALFAJORES,
+  CELO_SEPOLIA,
   CORE,
   CORE_TESTNET,
   HARMONY,
@@ -99,6 +100,7 @@ type Chain =
   | typeof BOBA_ETHEREUM
   | typeof CELO
   | typeof CELO_ALFAJORES
+  | typeof CELO_SEPOLIA
   | typeof CORE
   | typeof CORE_TESTNET
   | typeof HARMONY
@@ -199,6 +201,8 @@ function endpoint(chain: Chain): string {
       return 'https://celo.drpc.org';
     case CELO_ALFAJORES:
       return 'https://celo-alfajores.drpc.org';
+    case CELO_SEPOLIA:
+      return 'https://celo-sepolia.drpc.org';
     case CORE:
       return 'https://core.drpc.org';
     case CORE_TESTNET:
