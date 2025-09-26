@@ -26,6 +26,7 @@ import {
   CELO,
   CELO_ALFAJORES,
   CELO_BAKLAVA,
+  CELO_SEPOLIA,
   WORLDCHAIN,
   WORLDCHAIN_SEPOLIA,
   MONAD_TESTNET,
@@ -59,6 +60,7 @@ type Chain =
   | typeof CELO
   | typeof CELO_ALFAJORES
   | typeof CELO_BAKLAVA
+  | typeof CELO_SEPOLIA
   | typeof MONAD_TESTNET
   | typeof WORLDCHAIN
   | typeof WORLDCHAIN_SEPOLIA;
@@ -119,6 +121,8 @@ function endpoint(chain: Chain, key: string): string {
       return `https://celo-alfajores.g.alchemy.com/v2/${key}`;
     case CELO_BAKLAVA:
       return `https://celo-baklava.g.alchemy.com/v2/${key}`;
+    case CELO_SEPOLIA:
+      return `https://celo-sepolia.g.alchemy.com/v2/${key}`;
     case MONAD_TESTNET:
       return `https://monad-testnet.g.alchemy.com/v2/${key}`;
     case WORLDCHAIN:
