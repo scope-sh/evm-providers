@@ -122,8 +122,10 @@ type Chain =
   | typeof ZORA_SEPOLIA;
 
 function makeEndpoint(chainStr: string, key?: string): string {
-  return key ? `https://lb.drpc.org/${chainStr}/${key}` : `https://${chainStr}.drpc.org`;
-} 
+  return key
+    ? `https://lb.drpc.org/${chainStr}/${key}`
+    : `https://${chainStr}.drpc.org`;
+}
 
 function endpoint(chain: Chain, key?: string): string {
   switch (chain) {
