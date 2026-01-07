@@ -73,78 +73,84 @@ type Chain =
   | typeof FLARE
   | typeof TAIKO_KATLA;
 
-function endpoint(chain: Chain): string {
+function makeEndpoint(chainStr: string, key?: string): string {
+  return key
+    ? `https://rpc.ankr.com/${chainStr}/${key}`
+    : `https://rpc.ankr.com/${chainStr}`;
+}
+
+function endpoint(chain: Chain, key?: string): string {
   switch (chain) {
     case ETHEREUM:
-      return 'https://rpc.ankr.com/eth';
+      return makeEndpoint('eth', key);
     case SEPOLIA:
-      return 'https://rpc.ankr.com/eth_sepolia';
+      return makeEndpoint('eth_sepolia', key);
     case HOLESKY:
-      return 'https://rpc.ankr.com/eth_holesky';
+      return makeEndpoint('eth_holesky', key);
     case POLYGON:
-      return 'https://rpc.ankr.com/polygon';
+      return makeEndpoint('polygon', key);
     case POLYGON_AMOY:
-      return 'https://rpc.ankr.com/polygon_amoy';
+      return makeEndpoint('polygon_amoy', key);
     case POLYGON_ZKEVM:
-      return 'https://rpc.ankr.com/polygon_zkevm';
+      return makeEndpoint('polygon_zkevm', key);
     case POLYGON_ZKEVM_TESTNET:
-      return 'https://rpc.ankr.com/polygon_zkevm_testnet';
+      return makeEndpoint('polygon_zkevm_testnet', key);
     case POLYGON_ZKEVM_CARDONA:
-      return 'https://rpc.ankr.com/polygon_zkevm_cardona';
+      return makeEndpoint('polygon_zkevm_cardona', key);
     case ARBITRUM:
-      return 'https://rpc.ankr.com/arbitrum';
+      return makeEndpoint('arbitrum', key);
     case ARBITRUM_SEPOLIA:
-      return 'https://rpc.ankr.com/arbitrum_sepolia';
+      return makeEndpoint('arbitrum_sepolia', key);
     case ARBITRUM_NOVA:
-      return 'https://rpc.ankr.com/arbitrumnova';
+      return makeEndpoint('arbitrumnova', key);
     case OPTIMISM:
-      return 'https://rpc.ankr.com/optimism';
+      return makeEndpoint('optimism', key);
     case OPTIMISM_SEPOLIA:
-      return 'https://rpc.ankr.com/optimism_sepolia';
+      return makeEndpoint('optimism_sepolia', key);
     case BASE:
-      return 'https://rpc.ankr.com/base';
+      return makeEndpoint('base', key);
     case BASE_SEPOLIA:
-      return 'https://rpc.ankr.com/base_sepolia';
+      return makeEndpoint('base_sepolia', key);
     case BSC:
-      return 'https://rpc.ankr.com/bsc';
+      return makeEndpoint('bsc', key);
     case BSC_TESTNET:
-      return 'https://rpc.ankr.com/bsc_testnet_chapel';
+      return makeEndpoint('bsc_testnet_chapel', key);
     case FANTOM:
-      return 'https://rpc.ankr.com/fantom';
+      return makeEndpoint('fantom', key);
     case FANTOM_TESTNET:
-      return 'https://rpc.ankr.com/fantom_testnet';
+      return makeEndpoint('fantom_testnet', key);
     case AVALANCHE_C:
-      return 'https://rpc.ankr.com/avalanche';
+      return makeEndpoint('avalanche', key);
     case AVALANCHE_FUJI:
-      return 'https://rpc.ankr.com/avalanche_fuji';
+      return makeEndpoint('avalanche_fuji', key);
     case GNOSIS:
-      return 'https://rpc.ankr.com/gnosis';
+      return makeEndpoint('gnosis', key);
     case GNOSIS_CHIADO:
-      return 'https://rpc.ankr.com/gnosis_testnet';
+      return makeEndpoint('gnosis_testnet', key);
     case SCROLL:
-      return 'https://rpc.ankr.com/scroll';
+      return makeEndpoint('scroll', key);
     case SCROLL_SEPOLIA:
-      return 'https://rpc.ankr.com/scroll_sepolia_testnet';
+      return makeEndpoint('scroll_sepolia_testnet', key);
     case ZKSYNC_ERA:
-      return 'https://rpc.ankr.com/zksync_era';
+      return makeEndpoint('zksync_era', key);
     case ZKSYNC_ERA_SEPOLIA:
-      return 'https://rpc.ankr.com/zksync_era_sepolia';
+      return makeEndpoint('zksync_era_sepolia', key);
     case BLAST:
-      return 'https://rpc.ankr.com/blast';
+      return makeEndpoint('blast', key);
     case BLAST_SEPOLIA:
-      return 'https://rpc.ankr.com/blast_testnet_sepolia';
+      return makeEndpoint('blast_testnet_sepolia', key);
     case MANTLE:
-      return 'https://rpc.ankr.com/mantle';
+      return makeEndpoint('mantle', key);
     case MANTLE_SEPOLIA:
-      return 'https://rpc.ankr.com/mantle_sepolia';
+      return makeEndpoint('mantle_sepolia', key);
     case CELO:
-      return 'https://rpc.ankr.com/celo';
+      return makeEndpoint('celo', key);
     case MOONBEAM:
-      return 'https://rpc.ankr.com/moonbeam';
+      return makeEndpoint('moonbeam', key);
     case FLARE:
-      return 'https://rpc.ankr.com/flare';
+      return makeEndpoint('flare', key);
     case TAIKO_KATLA:
-      return 'https://rpc.ankr.com/taiko_katla';
+      return makeEndpoint('taiko_katla', key);
   }
 }
 
