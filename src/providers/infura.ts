@@ -2,6 +2,7 @@ import {
   ETHEREUM,
   SEPOLIA,
   LINEA,
+  LINEA_SEPOLIA,
   POLYGON,
   POLYGON_AMOY,
   BLAST,
@@ -15,12 +16,22 @@ import {
   AVALANCHE_C,
   AVALANCHE_FUJI,
   CELO,
+  CELO_SEPOLIA,
+  BASE,
+  BASE_SEPOLIA,
+  MONAD,
+  MONAD_TESTNET,
+  SCROLL,
+  SCROLL_SEPOLIA,
+  UNICHAIN,
+  UNICHAIN_SEPOLIA,
 } from '../utils/chains.js';
 
 type Chain =
   | typeof ETHEREUM
   | typeof SEPOLIA
   | typeof LINEA
+  | typeof LINEA_SEPOLIA
   | typeof POLYGON
   | typeof POLYGON_AMOY
   | typeof BLAST
@@ -33,7 +44,16 @@ type Chain =
   | typeof PALM_TESTNET
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
-  | typeof CELO;
+  | typeof CELO
+  | typeof CELO_SEPOLIA
+  | typeof BASE
+  | typeof BASE_SEPOLIA
+  | typeof MONAD
+  | typeof MONAD_TESTNET
+  | typeof SCROLL
+  | typeof SCROLL_SEPOLIA
+  | typeof UNICHAIN
+  | typeof UNICHAIN_SEPOLIA;
 
 function endpoint(chain: Chain, key: string): string {
   switch (chain) {
@@ -43,6 +63,8 @@ function endpoint(chain: Chain, key: string): string {
       return `https://sepolia.infura.io/v3/${key}`;
     case LINEA:
       return `https://linea-mainnet.infura.io/v3/${key}`;
+    case LINEA_SEPOLIA:
+      return `https://linea-sepolia.infura.io/v3/${key}`;
     case POLYGON:
       return `https://polygon-mainnet.infura.io/v3/${key}`;
     case POLYGON_AMOY:
@@ -69,6 +91,24 @@ function endpoint(chain: Chain, key: string): string {
       return `https://avalanche-fuji.infura.io/v3/${key}`;
     case CELO:
       return `https://celo-mainnet.infura.io/v3/${key}`;
+    case CELO_SEPOLIA:
+      return `https://celo-sepolia.infura.io/v3/${key}`;
+    case BASE:
+      return `https://base-mainnet.infura.io/v3/${key}`;
+    case BASE_SEPOLIA:
+      return `https://base-sepolia.infura.io/v3/${key}`;
+    case MONAD:
+      return `https://monad-mainnet.infura.io/v3/${key}`;
+    case MONAD_TESTNET:
+      return `https://monad-testnet.infura.io/v3/${key}`;
+    case SCROLL:
+      return `https://scroll-mainnet.infura.io/v3/${key}`;
+    case SCROLL_SEPOLIA:
+      return `https://scroll-sepolia.infura.io/v3/${key}`;
+    case UNICHAIN:
+      return `https://unichain-mainnet.infura.io/v3/${key}`;
+    case UNICHAIN_SEPOLIA:
+      return `https://unichain-sepolia.infura.io/v3/${key}`;
   }
 }
 
