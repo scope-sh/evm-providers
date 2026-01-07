@@ -20,7 +20,7 @@ describe('drpc', () => {
 
   it('should return the correct URL for Ethereum with an API key', () => {
     const url = drpc(1, API_KEY);
-    expect(url).toBe(`https://lb.drpc.org/eth/${API_KEY}`);
+    expect(url).toBe(`https://lb.drpc.live/eth/${API_KEY}`);
   });
 });
 

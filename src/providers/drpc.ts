@@ -13,6 +13,7 @@ import {
   ZKSYNC_ERA,
   ZKSYNC_ERA_SEPOLIA,
   LINEA,
+  LINEA_SEPOLIA,
   BASE,
   BASE_SEPOLIA,
   FANTOM,
@@ -58,6 +59,8 @@ import {
   TAIKO_HOODI,
   ZORA,
   ZORA_SEPOLIA,
+  DOMA,
+  DOMA_TESTNET,
 } from '../utils/chains.js';
 
 type Chain =
@@ -75,6 +78,7 @@ type Chain =
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA
   | typeof LINEA
+  | typeof LINEA_SEPOLIA
   | typeof BASE
   | typeof BASE_SEPOLIA
   | typeof FANTOM
@@ -119,11 +123,13 @@ type Chain =
   | typeof TAIKO_ALETHIA
   | typeof TAIKO_HOODI
   | typeof ZORA
-  | typeof ZORA_SEPOLIA;
+  | typeof ZORA_SEPOLIA
+  | typeof DOMA
+  | typeof DOMA_TESTNET;
 
 function makeEndpoint(chainStr: string, key?: string): string {
   return key
-    ? `https://lb.drpc.org/${chainStr}/${key}`
+    ? `https://lb.drpc.live/${chainStr}/${key}`
     : `https://${chainStr}.drpc.org`;
 }
 
@@ -157,6 +163,8 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('zksync-testnet', key);
     case LINEA:
       return makeEndpoint('linea', key);
+    case LINEA_SEPOLIA:
+      return makeEndpoint('linea-sepolia', key);
     case BASE:
       return makeEndpoint('base', key);
     case BASE_SEPOLIA:
@@ -247,6 +255,10 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('zora', key);
     case ZORA_SEPOLIA:
       return makeEndpoint('zora-sepolia', key);
+    case DOMA:
+      return makeEndpoint('doma', key);
+    case DOMA_TESTNET:
+      return makeEndpoint('doma-testnet', key);
   }
 }
 
