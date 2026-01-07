@@ -28,9 +28,15 @@ import {
   MANTLE,
   MANTLE_SEPOLIA,
   CELO,
+  CELO_SEPOLIA,
   MOONBEAM,
   FLARE,
-  TAIKO_KATLA,
+  TAIKO_ALETHIA,
+  TAIKO_HOODI,
+  MONAD,
+  MONAD_TESTNET,
+  FILECOIN_CALIBRATION,
+  FILECOIN,
 } from '../utils/chains.js';
 
 type Chain =
@@ -63,9 +69,15 @@ type Chain =
   | typeof MANTLE
   | typeof MANTLE_SEPOLIA
   | typeof CELO
+  | typeof CELO_SEPOLIA
   | typeof MOONBEAM
   | typeof FLARE
-  | typeof TAIKO_KATLA;
+  | typeof TAIKO_ALETHIA
+  | typeof TAIKO_HOODI
+  | typeof MONAD
+  | typeof MONAD_TESTNET
+  | typeof FILECOIN
+  | typeof FILECOIN_CALIBRATION;
 
 function makeEndpoint(chainStr: string, key?: string): string {
   return key
@@ -133,12 +145,24 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('mantle_sepolia', key);
     case CELO:
       return makeEndpoint('celo', key);
+    case CELO_SEPOLIA:
+      return makeEndpoint('celo_sepolia', key);
     case MOONBEAM:
       return makeEndpoint('moonbeam', key);
     case FLARE:
       return makeEndpoint('flare', key);
-    case TAIKO_KATLA:
-      return makeEndpoint('taiko_katla', key);
+    case TAIKO_ALETHIA:
+      return makeEndpoint('taiko', key);
+    case TAIKO_HOODI:
+      return makeEndpoint('taiko_hoodi', key);
+    case MONAD:
+      return makeEndpoint('monad_mainnet', key);
+    case MONAD_TESTNET:
+      return makeEndpoint('monad_testnet', key);
+    case FILECOIN:
+      return makeEndpoint('filecoin', key);
+    case FILECOIN_CALIBRATION:
+      return makeEndpoint('filecoin_testnet', key);
   }
 }
 
