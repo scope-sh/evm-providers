@@ -4,9 +4,6 @@ import {
   HOLESKY,
   POLYGON,
   POLYGON_AMOY,
-  POLYGON_ZKEVM,
-  POLYGON_ZKEVM_TESTNET,
-  POLYGON_ZKEVM_CARDONA,
   ARBITRUM,
   ARBITRUM_SEPOLIA,
   ARBITRUM_NOVA,
@@ -42,9 +39,6 @@ type Chain =
   | typeof HOLESKY
   | typeof POLYGON
   | typeof POLYGON_AMOY
-  | typeof POLYGON_ZKEVM
-  | typeof POLYGON_ZKEVM_TESTNET
-  | typeof POLYGON_ZKEVM_CARDONA
   | typeof ARBITRUM
   | typeof ARBITRUM_SEPOLIA
   | typeof ARBITRUM_NOVA
@@ -91,12 +85,6 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('polygon', key);
     case POLYGON_AMOY:
       return makeEndpoint('polygon_amoy', key);
-    case POLYGON_ZKEVM:
-      return makeEndpoint('polygon_zkevm', key);
-    case POLYGON_ZKEVM_TESTNET:
-      return makeEndpoint('polygon_zkevm_testnet', key);
-    case POLYGON_ZKEVM_CARDONA:
-      return makeEndpoint('polygon_zkevm_cardona', key);
     case ARBITRUM:
       return makeEndpoint('arbitrum', key);
     case ARBITRUM_SEPOLIA:
