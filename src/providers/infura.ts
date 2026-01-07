@@ -15,7 +15,6 @@ import {
   AVALANCHE_C,
   AVALANCHE_FUJI,
   CELO,
-  CELO_ALFAJORES,
 } from '../utils/chains.js';
 
 type Chain =
@@ -34,8 +33,7 @@ type Chain =
   | typeof PALM_TESTNET
   | typeof AVALANCHE_C
   | typeof AVALANCHE_FUJI
-  | typeof CELO
-  | typeof CELO_ALFAJORES;
+  | typeof CELO;
 
 function endpoint(chain: Chain, key: string): string {
   switch (chain) {
@@ -71,8 +69,6 @@ function endpoint(chain: Chain, key: string): string {
       return `https://avalanche-fuji.infura.io/v3/${key}`;
     case CELO:
       return `https://celo-mainnet.infura.io/v3/${key}`;
-    case CELO_ALFAJORES:
-      return `https://celo-alfajores.infura.io/v3/${key}`;
   }
 }
 

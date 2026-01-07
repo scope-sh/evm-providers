@@ -37,7 +37,6 @@ import {
   BOBA_BNB,
   BOBA_ETHEREUM,
   CELO,
-  CELO_ALFAJORES,
   CELO_SEPOLIA,
   CORE,
   CORE_TESTNET,
@@ -99,7 +98,6 @@ type Chain =
   | typeof BOBA_BNB
   | typeof BOBA_ETHEREUM
   | typeof CELO
-  | typeof CELO_ALFAJORES
   | typeof CELO_SEPOLIA
   | typeof CORE
   | typeof CORE_TESTNET
@@ -205,8 +203,6 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('boba-eth', key);
     case CELO:
       return makeEndpoint('celo', key);
-    case CELO_ALFAJORES:
-      return makeEndpoint('celo-alfajores', key);
     case CELO_SEPOLIA:
       return makeEndpoint('celo-sepolia', key);
     case CORE:

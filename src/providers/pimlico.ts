@@ -10,7 +10,6 @@ import type {
   BSC_TESTNET,
   BLAST_SEPOLIA,
   CELO,
-  CELO_ALFAJORES,
   GNOSIS_CHIADO,
   CYBER_TESTNET,
   DFK_CHAIN,
@@ -59,7 +58,6 @@ type Chain =
   | typeof BSC_TESTNET
   | typeof BLAST_SEPOLIA
   | typeof CELO
-  | typeof CELO_ALFAJORES
   | typeof GNOSIS_CHIADO
   | typeof CYBER_TESTNET
   | typeof DFK_CHAIN
