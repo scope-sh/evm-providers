@@ -39,7 +39,6 @@ import type {
   SCROLL_ALPHA,
   SCROLL_SEPOLIA,
   SEPOLIA,
-  TAIKO_KATLA,
   XAI,
   XAI_SEPOLIA,
   ZORA,
@@ -87,7 +86,6 @@ type Chain =
   | typeof SCROLL_ALPHA
   | typeof SCROLL_SEPOLIA
   | typeof SEPOLIA
-  | typeof TAIKO_KATLA
   | typeof XAI
   | typeof XAI_SEPOLIA
   | typeof ZORA

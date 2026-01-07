@@ -54,7 +54,8 @@ import {
   MOONRIVER,
   OP_BNB,
   OP_BNB_TESTNET,
-  TAIKO_KATLA,
+  TAIKO_ALETHIA,
+  TAIKO_HOODI,
   ZORA,
   ZORA_SEPOLIA,
 } from '../utils/chains.js';
@@ -115,7 +116,8 @@ type Chain =
   | typeof MOONRIVER
   | typeof OP_BNB
   | typeof OP_BNB_TESTNET
-  | typeof TAIKO_KATLA
+  | typeof TAIKO_ALETHIA
+  | typeof TAIKO_HOODI
   | typeof ZORA
   | typeof ZORA_SEPOLIA;
 
@@ -237,8 +239,10 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('opbnb', key);
     case OP_BNB_TESTNET:
       return makeEndpoint('opbnb-testnet', key);
-    case TAIKO_KATLA:
-      return makeEndpoint('taiko-katla', key);
+    case TAIKO_ALETHIA:
+      return makeEndpoint('taiko', key);
+    case TAIKO_HOODI:
+      return makeEndpoint('taiko-hoodi', key);
     case ZORA:
       return makeEndpoint('zora', key);
     case ZORA_SEPOLIA:
