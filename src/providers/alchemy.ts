@@ -24,12 +24,17 @@ import {
   SCROLL,
   SCROLL_SEPOLIA,
   CELO,
-  CELO_ALFAJORES,
-  CELO_BAKLAVA,
   CELO_SEPOLIA,
   WORLDCHAIN,
   WORLDCHAIN_SEPOLIA,
+  MONAD,
   MONAD_TESTNET,
+  ZKSYNC_ERA,
+  ZKSYNC_ERA_SEPOLIA,
+  ZORA,
+  ZORA_SEPOLIA,
+  UNICHAIN,
+  UNICHAIN_SEPOLIA,
 } from '../utils/chains.js';
 
 type Chain =
@@ -58,12 +63,17 @@ type Chain =
   | typeof SCROLL
   | typeof SCROLL_SEPOLIA
   | typeof CELO
-  | typeof CELO_ALFAJORES
-  | typeof CELO_BAKLAVA
   | typeof CELO_SEPOLIA
+  | typeof MONAD
   | typeof MONAD_TESTNET
   | typeof WORLDCHAIN
-  | typeof WORLDCHAIN_SEPOLIA;
+  | typeof WORLDCHAIN_SEPOLIA
+  | typeof ZKSYNC_ERA
+  | typeof ZKSYNC_ERA_SEPOLIA
+  | typeof ZORA
+  | typeof ZORA_SEPOLIA
+  | typeof UNICHAIN
+  | typeof UNICHAIN_SEPOLIA;
 
 function endpoint(chain: Chain, key: string): string {
   switch (chain) {
@@ -117,18 +127,28 @@ function endpoint(chain: Chain, key: string): string {
       return `https://scroll-sepolia.g.alchemy.com/v2/${key}`;
     case CELO:
       return `https://celo-mainnet.g.alchemy.com/v2/${key}`;
-    case CELO_ALFAJORES:
-      return `https://celo-alfajores.g.alchemy.com/v2/${key}`;
-    case CELO_BAKLAVA:
-      return `https://celo-baklava.g.alchemy.com/v2/${key}`;
     case CELO_SEPOLIA:
       return `https://celo-sepolia.g.alchemy.com/v2/${key}`;
+    case MONAD:
+      return `https://monad-mainnet.g.alchemy.com/v2/${key}`;
     case MONAD_TESTNET:
       return `https://monad-testnet.g.alchemy.com/v2/${key}`;
     case WORLDCHAIN:
       return `https://worldchain-mainnet.g.alchemy.com/v2/${key}`;
     case WORLDCHAIN_SEPOLIA:
       return `https://worldchain-sepolia.g.alchemy.com/v2/${key}`;
+    case ZKSYNC_ERA:
+      return `https://zksync-mainnet.g.alchemy.com/v2/${key}`;
+    case ZKSYNC_ERA_SEPOLIA:
+      return `https://zksync-sepolia.g.alchemy.com/v2/${key}`;
+    case ZORA:
+      return `https://zora-mainnet.g.alchemy.com/v2/${key}`;
+    case ZORA_SEPOLIA:
+      return `https://zora-sepolia.g.alchemy.com/v2/${key}`;
+    case UNICHAIN:
+      return `https://unichain-mainnet.g.alchemy.com/v2/${key}`;
+    case UNICHAIN_SEPOLIA:
+      return `https://unichain-sepolia.g.alchemy.com/v2/${key}`;
   }
 }
 

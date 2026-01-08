@@ -57,7 +57,6 @@ Finally, we would like to extend the registry by supporting more features (e.g. 
 - QuickNode
 - Cloudflare
 - LlamaNodes
-- Blast
 - Tenderly
 - 1RPC
 - Chainstack

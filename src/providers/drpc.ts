@@ -13,6 +13,7 @@ import {
   ZKSYNC_ERA,
   ZKSYNC_ERA_SEPOLIA,
   LINEA,
+  LINEA_SEPOLIA,
   BASE,
   BASE_SEPOLIA,
   FANTOM,
@@ -37,7 +38,6 @@ import {
   BOBA_BNB,
   BOBA_ETHEREUM,
   CELO,
-  CELO_ALFAJORES,
   CELO_SEPOLIA,
   CORE,
   CORE_TESTNET,
@@ -55,9 +55,12 @@ import {
   MOONRIVER,
   OP_BNB,
   OP_BNB_TESTNET,
-  TAIKO_KATLA,
+  TAIKO_ALETHIA,
+  TAIKO_HOODI,
   ZORA,
   ZORA_SEPOLIA,
+  DOMA,
+  DOMA_TESTNET,
 } from '../utils/chains.js';
 
 type Chain =
@@ -75,6 +78,7 @@ type Chain =
   | typeof ZKSYNC_ERA
   | typeof ZKSYNC_ERA_SEPOLIA
   | typeof LINEA
+  | typeof LINEA_SEPOLIA
   | typeof BASE
   | typeof BASE_SEPOLIA
   | typeof FANTOM
@@ -99,7 +103,6 @@ type Chain =
   | typeof BOBA_BNB
   | typeof BOBA_ETHEREUM
   | typeof CELO
-  | typeof CELO_ALFAJORES
   | typeof CELO_SEPOLIA
   | typeof CORE
   | typeof CORE_TESTNET
@@ -117,13 +120,16 @@ type Chain =
   | typeof MOONRIVER
   | typeof OP_BNB
   | typeof OP_BNB_TESTNET
-  | typeof TAIKO_KATLA
+  | typeof TAIKO_ALETHIA
+  | typeof TAIKO_HOODI
   | typeof ZORA
-  | typeof ZORA_SEPOLIA;
+  | typeof ZORA_SEPOLIA
+  | typeof DOMA
+  | typeof DOMA_TESTNET;
 
 function makeEndpoint(chainStr: string, key?: string): string {
   return key
-    ? `https://lb.drpc.org/${chainStr}/${key}`
+    ? `https://lb.drpc.live/${chainStr}/${key}`
     : `https://${chainStr}.drpc.org`;
 }
 
@@ -157,6 +163,8 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('zksync-testnet', key);
     case LINEA:
       return makeEndpoint('linea', key);
+    case LINEA_SEPOLIA:
+      return makeEndpoint('linea-sepolia', key);
     case BASE:
       return makeEndpoint('base', key);
     case BASE_SEPOLIA:
@@ -205,8 +213,6 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('boba-eth', key);
     case CELO:
       return makeEndpoint('celo', key);
-    case CELO_ALFAJORES:
-      return makeEndpoint('celo-alfajores', key);
     case CELO_SEPOLIA:
       return makeEndpoint('celo-sepolia', key);
     case CORE:
@@ -241,12 +247,18 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('opbnb', key);
     case OP_BNB_TESTNET:
       return makeEndpoint('opbnb-testnet', key);
-    case TAIKO_KATLA:
-      return makeEndpoint('taiko-katla', key);
+    case TAIKO_ALETHIA:
+      return makeEndpoint('taiko', key);
+    case TAIKO_HOODI:
+      return makeEndpoint('taiko-hoodi', key);
     case ZORA:
       return makeEndpoint('zora', key);
     case ZORA_SEPOLIA:
       return makeEndpoint('zora-sepolia', key);
+    case DOMA:
+      return makeEndpoint('doma', key);
+    case DOMA_TESTNET:
+      return makeEndpoint('doma-testnet', key);
   }
 }
 

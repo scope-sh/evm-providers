@@ -5,7 +5,6 @@ import {
   paymaster as biconomyPaymaster,
   type Chain as BiconomyChain,
 } from './biconomy.js';
-import blast, { type Chain as BlastChain } from './blast.js';
 import chainstack, { type Chain as ChainstackChain } from './chainstack.js';
 import cloudflare, { type Chain as CloudflareChain } from './cloudflare.js';
 import conduit, { type Chain as ConduitChain } from './conduit.js';
@@ -25,7 +24,6 @@ export {
   ankr,
   biconomyBundler,
   biconomyPaymaster,
-  blast,
   chainstack,
   cloudflare,
   conduit,
@@ -45,7 +43,6 @@ export type {
   AlchemyChain,
   AnkrChain,
   BiconomyChain,
-  BlastChain,
   ChainstackChain,
   CloudflareChain,
   ConduitChain,
