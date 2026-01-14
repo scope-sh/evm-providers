@@ -61,6 +61,8 @@ import {
   ZORA_SEPOLIA,
   DOMA,
   DOMA_TESTNET,
+  WORLDCHAIN,
+  WORLDCHAIN_SEPOLIA,
 } from '../utils/chains.js';
 
 type Chain =
@@ -125,7 +127,9 @@ type Chain =
   | typeof ZORA
   | typeof ZORA_SEPOLIA
   | typeof DOMA
-  | typeof DOMA_TESTNET;
+  | typeof DOMA_TESTNET
+  | typeof WORLDCHAIN
+  | typeof WORLDCHAIN_SEPOLIA;
 
 function makeEndpoint(chainStr: string, key?: string): string {
   return key
@@ -259,6 +263,10 @@ function endpoint(chain: Chain, key?: string): string {
       return makeEndpoint('doma', key);
     case DOMA_TESTNET:
       return makeEndpoint('doma-testnet', key);
+    case WORLDCHAIN:
+      return makeEndpoint('worldchain', key);
+    case WORLDCHAIN_SEPOLIA:
+      return makeEndpoint('worldchain-sepolia', key);
   }
 }
 
