@@ -10,6 +10,7 @@ import cloudflare, { type Chain as CloudflareChain } from './cloudflare.js';
 import conduit, { type Chain as ConduitChain } from './conduit.js';
 import drpc, { type Chain as DrpcChain } from './drpc.js';
 import gatewayFm, { type Chain as GatewayFmChain } from './gatewayFm.js';
+import goldsky, { type Chain as GoldskyChain } from './goldsky.js';
 import infura, { type Chain as InfuraChain } from './infura.js';
 import llamaNodes, { type Chain as LlamaNodesChain } from './llamaNodes.js';
 import oneRpc, { type Chain as OneRpcChain } from './oneRpc.js';
@@ -29,6 +30,7 @@ export {
   conduit,
   drpc,
   gatewayFm,
+  goldsky,
   infura,
   llamaNodes,
   oneRpc,
@@ -48,6 +50,7 @@ export type {
   ConduitChain,
   DrpcChain,
   GatewayFmChain,
+  GoldskyChain,
   InfuraChain,
   LlamaNodesChain,
   OneRpcChain,
