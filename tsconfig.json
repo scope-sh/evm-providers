@@ -23,15 +23,15 @@
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
     "outDir": "dist",
+    "rootDir": "src",
     "sourceMap": true,
     /* Building for a library */
     "declaration": true,
     /* Environment */
     "lib": ["ES2022"],
     /* Imports */
-    "baseUrl": "src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src/**/*.ts"]

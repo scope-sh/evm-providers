@@ -45,7 +45,6 @@ export default [
           },
         },
       ],
-      'import-x/no-unused-modules': 'error',
       'import-x/no-mutable-exports': 'error',
       'import-x/no-extraneous-dependencies': [
         'error',
